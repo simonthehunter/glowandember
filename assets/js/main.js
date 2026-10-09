@@ -120,6 +120,9 @@
     localStorage.removeItem('glow_ember_guest_email');
   } catch (e) {}
 
+  if (registerForm) registerForm.style.display = 'flex';
+  if (confirmMsg) confirmMsg.style.display = 'none';
+
   if (registerForm) {
     registerForm.addEventListener('submit', function (e) {
       e.preventDefault();
