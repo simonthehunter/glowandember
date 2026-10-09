@@ -114,11 +114,11 @@
   const emailInput = document.getElementById('guest-email');
   const confirmMsg = document.getElementById('confirmation-msg');
 
-  // Check saved state in localStorage
-  if (localStorage.getItem('glow_ember_registered') === 'true') {
-    if (registerForm) registerForm.style.display = 'none';
-    if (confirmMsg) confirmMsg.style.display = 'inline-flex';
-  }
+  // Ensure clean state on page load (do not lock out the form)
+  try {
+    localStorage.removeItem('glow_ember_registered');
+    localStorage.removeItem('glow_ember_guest_email');
+  } catch (e) {}
 
   if (registerForm) {
     registerForm.addEventListener('submit', function (e) {
@@ -152,14 +152,10 @@
         })
       })
       .then(function () {
-        localStorage.setItem('glow_ember_registered', 'true');
-        localStorage.setItem('glow_ember_guest_email', email);
         registerForm.style.display = 'none';
         if (confirmMsg) confirmMsg.style.display = 'inline-flex';
       })
       .catch(function () {
-        // Fallback display on network interruption
-        localStorage.setItem('glow_ember_registered', 'true');
         registerForm.style.display = 'none';
         if (confirmMsg) confirmMsg.style.display = 'inline-flex';
       });
