@@ -143,7 +143,7 @@
       }
 
       // Send to FormSubmit via AJAX
-      fetch('https://formsubmit.co/ajax/hello@glowandember.co.uk', {
+      fetch('https://formsubmit.co/ajax/mail@glowandember.co.uk', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
