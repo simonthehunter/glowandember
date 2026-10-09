@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glow and Ember | Radiance & Warmth</title>
+  <meta name="description" content="Glow and Ember — Radiance & Warmth. Sanctuary & Apothecary. Opening 2026.">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Glow and Ember | Radiance & Warmth">
+  <meta property="og:description" content="Sanctuary & Apothecary. Est. 2026.">
+  <meta property="og:image" content="assets/images/logo_transparent.png">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo_transparent.png">
+
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Ambient Warm Canvas Background -->
+  <canvas id="ambient-canvas"></canvas>
+
+  <main class="holding-container">
+
+    <!-- Top Minimalist Lockup -->
+    <div class="top-tagline">
+      <span>EST. 2026</span>
+    </div>
+
+    <!-- Master Seal Emblem (Integrated with zero edge seam) -->
+    <div class="brand-emblem-wrap">
+      <img 
+        src="assets/images/logo_transparent.png" 
+        alt="Glow and Ember" 
+        class="brand-emblem-img" 
+        width="200" 
+        height="200"
+      >
+    </div>
+
+    <!-- Master Subline -->
+    <h1 class="brand-subline">Radiance &amp; Warmth</h1>
+
+    <!-- Minimal Register Form -->
+    <div class="register-block">
+      <form class="register-form" id="register-form" novalidate>
+        <input 
+          type="email" 
+          id="guest-email" 
+          class="register-input" 
+          placeholder="Enter your email address..." 
+          required 
+          autocomplete="email"
+        >
+        <button type="submit" class="register-btn">
+          <span>Request Invitation</span>
+        </button>
+      </form>
+
+      <div class="confirmation-msg" id="confirmation-msg">
+        <span class="check-spark">✦</span>
+        <span>Your invitation has been reserved. Welcome to Glow and Ember.</span>
+      </div>
+
+      <p class="register-note">Private sanctuary announcements and opening reservations.</p>
+    </div>
+
+    <!-- Minimal Footer -->
+    <footer class="holding-footer">
+      <div class="footer-subline">SANCTUARY &amp; APOTHECARY</div>
+      <a href="mailto:concierge@glowandember.com" class="footer-inquiry">concierge@glowandember.com</a>
+      <p class="footer-copy">&copy; 2026 Glow and Ember. All rights reserved.</p>
+    </footer>
+
+  </main>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
