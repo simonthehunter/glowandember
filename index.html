@@ -50,16 +50,19 @@
 
     <!-- Minimal Register Form -->
     <div class="register-block">
-      <form class="register-form" id="register-form" novalidate>
+      <form class="register-form" id="register-form" action="https://formsubmit.co/hello@glowandember.co.uk" method="POST" novalidate>
+        <input type="hidden" name="_subject" value="Glow and Ember — New Invitation Request">
+        <input type="hidden" name="_captcha" value="false">
         <input 
           type="email" 
+          name="email"
           id="guest-email" 
           class="register-input" 
           placeholder="Enter your email address..." 
           required 
           autocomplete="email"
         >
-        <button type="submit" class="register-btn">
+        <button type="submit" class="register-btn" id="register-btn">
           <span>Request Invitation</span>
         </button>
       </form>

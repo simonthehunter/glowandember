@@ -132,13 +132,37 @@
         return;
       }
 
-      localStorage.setItem('glow_ember_registered', 'true');
-      localStorage.setItem('glow_ember_guest_email', email);
-
-      registerForm.style.display = 'none';
-      if (confirmMsg) {
-        confirmMsg.style.display = 'inline-flex';
+      const submitBtn = document.getElementById('register-btn');
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        const btnSpan = submitBtn.querySelector('span');
+        if (btnSpan) btnSpan.textContent = 'Reserving...';
       }
+
+      // Send to FormSubmit via AJAX
+      fetch('https://formsubmit.co/ajax/hello@glowandember.co.uk', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          email: email,
+          _subject: 'Glow and Ember — New Invitation Request'
+        })
+      })
+      .then(function () {
+        localStorage.setItem('glow_ember_registered', 'true');
+        localStorage.setItem('glow_ember_guest_email', email);
+        registerForm.style.display = 'none';
+        if (confirmMsg) confirmMsg.style.display = 'inline-flex';
+      })
+      .catch(function () {
+        // Fallback display on network interruption
+        localStorage.setItem('glow_ember_registered', 'true');
+        registerForm.style.display = 'none';
+        if (confirmMsg) confirmMsg.style.display = 'inline-flex';
+      });
     });
   }
 
