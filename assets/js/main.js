@@ -1,7 +1,7 @@
 /**
  * Glow and Ember — Minimal Holding Page Interactive Scripts
  * Master Brand Identity: Radiance & Warmth
- * Sanctuary & Apothecary | Est. 2026
+ * Est. 2026
  */
 
 (function () {
