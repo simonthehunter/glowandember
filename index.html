@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Glow and Ember | Radiance & Warmth</title>
-  <meta name="description" content="Glow and Ember — Radiance & Warmth. Opening 2026.">
+  <title>Glow and Ember | Radiance & Warmth • Boutique Brow & Lash Studio</title>
+  <meta name="description" content="Glow and Ember — Radiance & Warmth. Private 1-on-1 boutique brow and lash studio. Book online with Square.">
   
   <!-- Open Graph -->
   <meta property="og:title" content="Glow and Ember | Radiance & Warmth">
-  <meta property="og:description" content="Radiance & Warmth. Est. 2026.">
+  <meta property="og:description" content="Private 1-on-1 boutique brow and lash treatments. Book online with Square.">
   <meta property="og:image" content="assets/images/logo_transparent.png">
   <meta property="og:type" content="website">
 
@@ -18,57 +18,467 @@
   <!-- Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="assets/css/style.css?v=4">
+  <link rel="stylesheet" href="assets/css/style.css?v=6">
 </head>
 <body>
   <!-- Ambient Warm Canvas Background -->
   <canvas id="ambient-canvas"></canvas>
 
-  <main class="holding-container">
+  <!-- Sticky Minimalist Navigation -->
+  <header class="site-header" id="site-header">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand">
+        <span class="nav-brand-title">Glow &amp; Ember</span>
+        <span class="nav-brand-sub">Boutique Studio</span>
+      </a>
 
-    <!-- Top Minimalist Lockup -->
-    <div class="top-tagline">
-      <span>EST. 2026</span>
-    </div>
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#treatments" class="nav-link">Treatments</a>
+        <a href="#patch-test" class="nav-link">Patch Test</a>
+        <a href="#contact" class="nav-link">Got a Question?</a>
+      </nav>
 
-    <!-- Master Seal Emblem (Integrated with zero edge seam) -->
-    <div class="brand-emblem-wrap">
-      <img 
-        src="assets/images/logo_transparent.png" 
-        alt="Glow and Ember" 
-        class="brand-emblem-img" 
-        width="200" 
-        height="200"
-      >
-    </div>
-
-    <!-- Master Subline -->
-    <h1 class="brand-subline">Radiance &amp; Warmth</h1>
-
-    <!-- Booking CTA Action Block -->
-    <div class="booking-cta-block">
       <a 
-        href="https://square.site/book/LW9BHZQ4T5VW6/glow-and-ember-ballyclare" 
-        class="booking-primary-btn" 
+        href="https://square.site/book/LW9BHZQ4T5VW6/glow-and-ember" 
+        class="nav-cta-btn" 
         target="_blank" 
         rel="noopener noreferrer"
       >
-        <span>Book an Appointment</span>
-        <span class="btn-arrow">&rarr;</span>
+        <span>Book Now</span>
+        <span class="btn-spark">✦</span>
       </a>
-      <p class="booking-note">9 Craighill Dr, Ballyclare &bull; Andrea Hunter</p>
     </div>
+  </header>
 
-    <!-- Minimal Footer -->
-    <footer class="holding-footer">
-      <a href="mailto:mail@glowandember.co.uk" class="footer-inquiry">mail@glowandember.co.uk</a>
-      <p class="footer-copy">&copy; 2026 Glow and Ember. All rights reserved.</p>
+  <main class="page-container">
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="top-tagline">
+        <span>EST. 2026</span>
+      </div>
+
+      <div class="brand-emblem-wrap">
+        <img 
+          src="assets/images/logo_transparent.png" 
+          alt="Glow and Ember" 
+          class="brand-emblem-img" 
+          width="200" 
+          height="200"
+        >
+      </div>
+
+      <h1 class="brand-subline">Radiance &amp; Warmth</h1>
+
+      <p class="hero-intro">
+        A private, unhurried boutique studio dedicated to bespoke brow mapping, precision styling, and restorative lash treatments.
+      </p>
+
+      <div class="hero-actions">
+        <a 
+          href="https://square.site/book/LW9BHZQ4T5VW6/glow-and-ember" 
+          class="primary-btn" 
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          <span>Book an Appointment</span>
+          <span class="btn-arrow">&rarr;</span>
+        </a>
+
+        <a href="#treatments" class="secondary-btn">
+          <span>Explore Treatments</span>
+          <span class="btn-arrow">&darr;</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- TREATMENTS SECTION -->
+    <section class="section-container" id="treatments">
+      <div class="section-header">
+        <span class="section-tagline">Treatment Menu</span>
+        <h2 class="section-title">Bespoke Brow &amp; Lash Rituals</h2>
+        <div class="section-divider"></div>
+        <p class="section-desc">
+          Every appointment is tailored to your unique facial geometry, bone structure, and natural coloring for timeless, effortless radiance.
+        </p>
+      </div>
+
+      <!-- Signature Treatments (Highlighted) -->
+      <div class="treatment-group">
+        <div class="group-header">
+          <span class="spark-icon">✦</span>
+          <h3 class="group-title">Signature Treatments</h3>
+        </div>
+
+        <div class="signature-grid">
+          <!-- Signature Brows -->
+          <article class="treatment-card featured-card">
+            <div class="card-top">
+              <span class="treatment-badge">Signature Ritual</span>
+              <div class="price-lockup">
+                <span class="price">&pound;25</span>
+                <span class="duration">45 mins</span>
+              </div>
+            </div>
+            <h4 class="treatment-name">Signature Brows</h4>
+            <p class="treatment-detail">Precision Brow Mapping, Tinting &amp; Waxing</p>
+            <p class="treatment-summary">
+              A bespoke arch restoration. Includes meticulous brow mapping to balance your natural symmetry, customized pigment formulation, and gentle precision waxing with tailored finishing.
+            </p>
+            <div class="card-footer">
+              <span class="deposit-note">Deposit: &pound;15</span>
+              <a 
+                href="https://square.site/book/LW9BHZQ4T5VW6/glow-and-ember" 
+                class="card-book-btn" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <span>Book Treatment</span>
+                <span class="arrow">&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Signature Brows & Lash Tint -->
+          <article class="treatment-card featured-card">
+            <div class="card-top">
+              <span class="treatment-badge">Complete Ritual</span>
+              <div class="price-lockup">
+                <span class="price">&pound;30</span>
+                <span class="duration">55 mins</span>
+              </div>
+            </div>
+            <h4 class="treatment-name">Signature Brows &amp; Eyelash Tint</h4>
+            <p class="treatment-detail">Precision Brow Mapping, Tinting, Waxing &amp; Eyelash Tint</p>
+            <p class="treatment-summary">
+              The complete gaze transformation. Pairs the full signature brow mapping and waxing ritual with a rich, glossy lash tint that brings depth and luminous definition to your eyes.
+            </p>
+            <div class="card-footer">
+              <span class="deposit-note">Deposit: &pound;15</span>
+              <a 
+                href="https://square.site/book/LW9BHZQ4T5VW6/glow-and-ember" 
+                class="card-book-btn" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <span>Book Treatment</span>
+                <span class="arrow">&rarr;</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Essential Treatments Grid -->
+      <div class="treatment-group">
+        <div class="group-header">
+          <span class="spark-icon">✦</span>
+          <h3 class="group-title">Individual Essentials</h3>
+        </div>
+
+        <div class="essentials-grid">
+          <!-- Eyebrow Wax -->
+          <article class="treatment-card standard-card">
+            <div class="card-top">
+              <h4 class="treatment-name">Eyebrow Wax</h4>
+              <div class="price-lockup">
+                <span class="price">&pound;10</span>
+                <span class="duration">30 mins</span>
+              </div>
+            </div>
+            <p class="treatment-summary">
+              Clean, tidy, and define your natural brow shape with gentle, skin-friendly hot waxing.
+            </p>
+            <div class="card-footer">
+              <span class="deposit-note">Deposit: &pound;5</span>
+              <a 
+                href="https://square.site/book/LW9BHZQ4T5VW6/glow-and-ember" 
+                class="card-book-btn" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <span>Book</span>
+                <span class="arrow">&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Eyebrow Tint -->
+          <article class="treatment-card standard-card">
+            <div class="card-top">
+              <h4 class="treatment-name">Eyebrow Tint</h4>
+              <div class="price-lockup">
+                <span class="price">&pound;10</span>
+                <span class="duration">30 mins</span>
+              </div>
+            </div>
+            <p class="treatment-summary">
+              Custom-blended tint formulated to enrich brow depth, fill lighter hairs, and add natural fullness.
+            </p>
+            <div class="card-footer">
+              <span class="deposit-note">Deposit: &pound;5</span>
+              <a 
+                href="https://square.site/book/LW9BHZQ4T5VW6/glow-and-ember" 
+                class="card-book-btn" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <span>Book</span>
+                <span class="arrow">&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Eyelash Tint -->
+          <article class="treatment-card standard-card">
+            <div class="card-top">
+              <h4 class="treatment-name">Eyelash Tint</h4>
+              <div class="price-lockup">
+                <span class="price">&pound;10</span>
+                <span class="duration">30 mins</span>
+              </div>
+            </div>
+            <p class="treatment-summary">
+              Deep, glossy lash enhancement that creates the appearance of longer, naturally darker lashes.
+            </p>
+            <div class="card-footer">
+              <span class="deposit-note">Deposit: &pound;5</span>
+              <a 
+                href="https://square.site/book/LW9BHZQ4T5VW6/glow-and-ember" 
+                class="card-book-btn" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <span>Book</span>
+                <span class="arrow">&rarr;</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Student Concessions -->
+      <div class="treatment-group">
+        <div class="student-banner">
+          <div class="student-info">
+            <div class="student-header">
+              <span class="student-tag">Student Concession</span>
+              <span class="student-id-notice">Student ID must be provided at the appointment</span>
+            </div>
+            <p class="student-desc">
+              Dedicated student pricing on signature brow and lash rituals. Please present a valid student ID during your appointment.
+            </p>
+          </div>
+
+          <div class="student-cards-grid">
+            <div class="student-item">
+              <div class="student-item-main">
+                <h5 class="student-item-title">Student - Signature Brows</h5>
+                <span class="student-item-sub">Precision Brow Mapping, Tinting &amp; Waxing</span>
+                <span class="student-item-meta">45 mins &bull; Deposit &pound;15</span>
+              </div>
+              <div class="student-item-action">
+                <span class="student-price">&pound;20</span>
+                <a 
+                  href="https://square.site/book/LW9BHZQ4T5VW6/glow-and-ember" 
+                  class="student-btn" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  Book &rarr;
+                </a>
+              </div>
+            </div>
+
+            <div class="student-item">
+              <div class="student-item-main">
+                <h5 class="student-item-title">Student - Signature Brows &amp; Eyelash Tint</h5>
+                <span class="student-item-sub">Precision Brow Mapping, Tinting, Waxing &amp; Eyelash Tint</span>
+                <span class="student-item-meta">55 mins &bull; Deposit &pound;15</span>
+              </div>
+              <div class="student-item-action">
+                <span class="student-price">&pound;25</span>
+                <a 
+                  href="https://square.site/book/LW9BHZQ4T5VW6/glow-and-ember" 
+                  class="student-btn" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  Book &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPLIMENTARY PATCH TEST SECTION -->
+    <section class="section-container" id="patch-test">
+      <div class="patch-test-card">
+        <div class="patch-test-content">
+          <div class="patch-badge">
+            <span class="spark">✦</span>
+            <span>First-Time Visitors</span>
+          </div>
+          <h3 class="patch-title">Patch Test</h3>
+          <p class="patch-meta">Complimentary &bull; Free (&pound;0) &bull; 10 mins</p>
+          <p class="patch-desc">
+            A patch test is a quick, skin-friendly service that checks compatibility with our products and treatments. The test is easy to apply and helps identify potential sensitivities, prioritising your safety and comfort. Book your individual appointment today to confidently proceed with your personalised skincare or beauty treatments.
+          </p>
+          <p class="patch-note">
+            Recommended 24 to 48 hours prior to your scheduled treatment.
+          </p>
+        </div>
+
+        <div class="patch-action-box">
+          <a 
+            href="https://square.site/book/LW9BHZQ4T5VW6/glow-and-ember" 
+            class="patch-btn" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            <span>Book Free Patch Test</span>
+            <span class="btn-arrow">&rarr;</span>
+          </a>
+          <span class="patch-caption">Instant confirmation via Square</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- GOT A QUESTION & CLIENT CARE SECTION -->
+    <section class="section-container" id="contact">
+      
+      <!-- Booking Policies & Client Care Pillars (Relocated to top of Got a Question) -->
+      <div class="etiquette-grid">
+        <div class="etiquette-card">
+          <div class="etiquette-icon">✦</div>
+          <h4 class="etiquette-title">Private 1-on-1 Time</h4>
+          <p class="etiquette-desc">
+            Appointments are scheduled individually to guarantee a quiet, restorative environment dedicated entirely to your treatment.
+          </p>
+        </div>
+
+        <div class="etiquette-card">
+          <div class="etiquette-icon">✦</div>
+          <h4 class="etiquette-title">Fair Deposit Policy</h4>
+          <p class="etiquette-desc">
+            A modest deposit (&pound;5 to &pound;15 depending on service) is required at the time of booking to reserve your dedicated slot in the diary.
+          </p>
+        </div>
+
+        <div class="etiquette-card">
+          <div class="etiquette-icon">✦</div>
+          <h4 class="etiquette-title">48-Hour Cancellation</h4>
+          <p class="etiquette-desc">
+            Deposits are fully refunded or moved to a new date with at least 48 hours&rsquo; notice, keeping the schedule fair for everyone.
+          </p>
+        </div>
+      </div>
+
+      <!-- Question Inquiries Header -->
+      <div class="section-header contact-header">
+        <span class="section-tagline">Inquiries &amp; Consultations</span>
+        <h2 class="section-title">Got a Question?</h2>
+        <div class="section-divider"></div>
+        <p class="section-desc">
+          Unsure which treatment suits you, need patch test advice, or have a question about booking? We&rsquo;re always here to assist.
+        </p>
+      </div>
+
+      <div class="contact-cards-grid">
+        <!-- Instagram Card -->
+        <div class="contact-card">
+          <div class="contact-card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </div>
+          <div class="contact-card-content">
+            <h4 class="contact-method-title">Instagram Direct Message</h4>
+            <p class="contact-handle">@glowandember.co.uk</p>
+            <p class="contact-note">
+              Drop us a message for treatment questions, updates, and quick inquiries.
+            </p>
+          </div>
+          <a 
+            href="https://instagram.com/glowandember.co.uk" 
+            class="contact-action-btn" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            <span>Message on Instagram</span>
+            <span>&nearr;</span>
+          </a>
+        </div>
+
+        <!-- Email Card -->
+        <div class="contact-card">
+          <div class="contact-card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </div>
+          <div class="contact-card-content">
+            <h4 class="contact-method-title">Direct Email</h4>
+            <p class="contact-handle">mail@glowandember.co.uk</p>
+            <p class="contact-note">
+              Send us an email anytime and we will get back to you as soon as possible.
+            </p>
+          </div>
+          <a 
+            href="mailto:mail@glowandember.co.uk" 
+            class="contact-action-btn"
+          >
+            <span>Send an Email</span>
+            <span>&nearr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img 
+            src="assets/images/logo_transparent.png" 
+            alt="Glow and Ember" 
+            class="footer-logo-img" 
+            width="70" 
+            height="70"
+          >
+          <span class="footer-brand-name">Glow and Ember</span>
+          <span class="footer-tagline">Radiance &amp; Warmth &bull; Est. 2026</span>
+        </div>
+
+        <nav class="footer-nav">
+          <a href="#hero">Home</a>
+          <a href="#treatments">Treatments</a>
+          <a href="#patch-test">Patch Test</a>
+          <a href="#contact">Questions</a>
+          <a href="https://square.site/book/LW9BHZQ4T5VW6/glow-and-ember" target="_blank" rel="noopener noreferrer">Book Online</a>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-social-links">
+          <a href="https://instagram.com/glowandember.co.uk" target="_blank" rel="noopener noreferrer">Instagram @glowandember.co.uk</a>
+          <span>&bull;</span>
+          <a href="mailto:mail@glowandember.co.uk">mail@glowandember.co.uk</a>
+        </div>
+        <p class="footer-copy">&copy; 2026 Glow and Ember. All rights reserved.</p>
+        <a href="#hero" class="back-to-top">Back to top &uarr;</a>
+      </div>
     </footer>
 
   </main>
 
-  <script src="assets/js/main.js?v=4"></script>
+  <script src="assets/js/main.js?v=6"></script>
 </body>
 </html>

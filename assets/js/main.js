@@ -1,5 +1,5 @@
 /**
- * Glow and Ember — Minimal Holding Page Interactive Scripts
+ * Glow and Ember — Boutique Salon Interactive Scripts
  * Master Brand Identity: Radiance & Warmth
  * Est. 2026
  */
@@ -13,7 +13,7 @@
     const ctx = canvas.getContext('2d');
     let width, height;
     let particles = [];
-    const particleCount = 24;
+    const particleCount = 26;
 
     function resize() {
       width = canvas.width = window.innerWidth;
@@ -108,4 +108,41 @@
     }
     animate();
   }
+
+  // --- 2. Header Scroll Elevation ---
+  const header = document.getElementById('site-header');
+  if (header) {
+    function handleScroll() {
+      if (window.scrollY > 24) {
+        header.style.boxShadow = '0 4px 20px rgba(45, 63, 51, 0.08)';
+        header.style.borderBottomColor = 'rgba(45, 63, 51, 0.12)';
+      } else {
+        header.style.boxShadow = 'none';
+        header.style.borderBottomColor = 'rgba(45, 63, 51, 0.08)';
+      }
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+  }
+
+  // --- 3. Smooth Scroll with Header Offset for In-Page Anchor Links ---
+  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      if (!targetId || targetId === '#') return;
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        e.preventDefault();
+        const headerOffset = 76;
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+
 })();
