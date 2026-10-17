@@ -20,15 +20,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="assets/css/style.css?v=2">
+  <link rel="stylesheet" href="assets/css/style.css?v=3">
 </head>
 <body>
-  <script>
-    try {
-      localStorage.clear();
-    } catch (e) {}
-  </script>
-
   <!-- Ambient Warm Canvas Background -->
   <canvas id="ambient-canvas"></canvas>
 
@@ -53,32 +47,26 @@
     <!-- Master Subline -->
     <h1 class="brand-subline">Radiance &amp; Warmth</h1>
 
-    <!-- Minimal Register Form -->
-    <div class="register-block">
-      <form class="register-form" id="register-form" action="https://formsubmit.co/mail@glowandember.co.uk" method="POST" novalidate>
-        <input type="hidden" name="_subject" value="Glow and Ember — New Invitation Request">
-        <input type="hidden" name="_captcha" value="false">
-        <input 
-          type="email" 
-          name="email"
-          id="guest-email" 
-          class="register-input" 
-          placeholder="Enter your email address..." 
-          required 
-          autocomplete="email"
-        >
-        <button type="submit" class="register-btn" id="register-btn">
-          <span>Request Invitation</span>
-        </button>
-      </form>
-
-      <div class="confirmation-msg" id="confirmation-msg">
-        <span class="check-spark">✦</span>
-        <span>Your invitation has been reserved. Welcome to Glow and Ember.</span>
+    <!-- Square Appointments Booking Section -->
+    <section class="booking-section" aria-label="Book an Appointment">
+      <div class="booking-header">
+        <h2 class="booking-title">Book an Appointment</h2>
+        <p class="booking-location">9 Craighill Dr, Ballyclare &bull; Andrea Hunter</p>
       </div>
 
-      <p class="register-note">Private announcements and opening reservations.</p>
-    </div>
+      <div class="booking-card">
+        <!-- Start Square Appointments Embed Code -->
+        <script src='https://square.site/appointments/buyer/widget/unrrg0p1qt4ar1/LW9BHZQ4T5VW6.js'></script>
+        <!-- End Square Appointments Embed Code -->
+      </div>
+
+      <p class="booking-direct-note">
+        Having trouble viewing the calendar? 
+        <a href="https://square.site/book/LW9BHZQ4T5VW6/glow-and-ember-ballyclare" target="_blank" rel="noopener noreferrer">
+          Open Square Booking directly &rarr;
+        </a>
+      </p>
+    </section>
 
     <!-- Minimal Footer -->
     <footer class="holding-footer">
@@ -88,6 +76,6 @@
 
   </main>
 
-  <script src="assets/js/main.js?v=2"></script>
+  <script src="assets/js/main.js?v=3"></script>
 </body>
 </html>

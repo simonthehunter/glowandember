@@ -41,11 +41,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   position: relative;
   overflow-x: hidden;
-  padding: 3rem 1.5rem;
+  padding: 3.5rem 1.5rem 4rem 1.5rem;
 }
 
 /* Ambient Canvas / Warm Ember Glow */
@@ -65,8 +66,8 @@ body {
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: 580px;
-  margin: auto;
+  max-width: 660px;
+  margin: 0 auto;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -143,93 +144,76 @@ body {
   background: linear-gradient(90deg, var(--color-radiance), transparent);
 }
 
-/* Register / Invitation Block */
-.register-block {
+/* Booking Section & Square Appointments Embed Card */
+.booking-section {
   width: 100%;
-  max-width: 440px;
   margin-bottom: 2.75rem;
-}
-
-.register-form {
   display: flex;
-  gap: 0.4rem;
-  background: #FFFFFF;
-  border: 1px solid rgba(45, 63, 51, 0.16);
-  border-radius: 9999px;
-  padding: 0.35rem 0.35rem 0.35rem 1.15rem;
-  box-shadow: 0 4px 18px -4px rgba(45, 63, 51, 0.05);
-  transition: var(--transition);
+  flex-direction: column;
+  align-items: center;
 }
 
-.register-form:focus-within {
-  border-color: var(--color-radiance);
-  box-shadow: 0 0 0 3px rgba(193, 127, 68, 0.14), 0 6px 20px -4px rgba(45, 63, 51, 0.08);
+.booking-header {
+  margin-bottom: 1.25rem;
+  text-align: center;
 }
 
-.register-input {
-  flex: 1;
-  border: none;
-  background: transparent;
-  outline: none;
-  font-family: var(--font-sans);
-  font-size: 0.88rem;
-  color: var(--color-restoration);
-  min-width: 0;
-}
-
-.register-input::placeholder {
-  color: #9AA79E;
-  font-weight: 350;
-}
-
-.register-btn {
-  border: none;
-  outline: none;
-  background-color: var(--color-restoration);
-  color: var(--color-substrate);
-  font-family: var(--font-sans);
-  font-size: 0.76rem;
-  font-weight: 600;
+.booking-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.35rem, 3.2vw, 1.8rem);
+  font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  padding: 0.72rem 1.35rem;
-  border-radius: 9999px;
-  cursor: pointer;
+  color: var(--color-restoration);
+  margin-bottom: 0.35rem;
+}
+
+.booking-location {
+  font-size: 0.76rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-radiance-deep);
+  font-weight: 500;
+}
+
+.booking-card {
+  width: 100%;
+  background: #FFFFFF;
+  border: 1px solid rgba(45, 63, 51, 0.14);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px -6px rgba(45, 63, 51, 0.07), 0 2px 8px rgba(45, 63, 51, 0.04);
+  min-height: 600px;
+  position: relative;
   transition: var(--transition);
-  white-space: nowrap;
 }
 
-.register-btn:hover {
-  background-color: var(--color-restoration-light);
-  box-shadow: 0 4px 14px rgba(45, 63, 51, 0.16);
-  transform: translateY(-1px);
+.booking-card iframe {
+  width: 100% !important;
+  min-height: 600px !important;
+  height: 680px !important;
+  border: none !important;
+  display: block;
+  background-color: #FFFFFF;
 }
 
-.register-note {
+.booking-direct-note {
   font-size: 0.76rem;
   color: var(--color-restoration-subtle);
-  margin-top: 0.85rem;
+  margin-top: 1.15rem;
   letter-spacing: 0.02em;
 }
 
-/* Success Confirmation State */
-.confirmation-msg {
-  display: none;
-  background: #FFFFFF;
-  border: 1px solid var(--color-radiance);
-  border-radius: 9999px;
-  padding: 0.8rem 1.35rem;
-  font-size: 0.82rem;
-  color: var(--color-restoration);
-  box-shadow: 0 4px 16px rgba(193, 127, 68, 0.08);
-  animation: fadeIn 0.4s ease forwards;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
+.booking-direct-note a {
+  color: var(--color-radiance-deep);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: var(--transition);
+  font-weight: 500;
 }
 
-.confirmation-msg .check-spark {
-  color: var(--color-radiance);
+.booking-direct-note a:hover {
+  color: var(--color-restoration);
 }
 
 /* Minimal Footer */
@@ -272,27 +256,22 @@ body {
 /* Mobile Responsiveness */
 @media (max-width: 520px) {
   body {
-    padding: 2rem 1.15rem;
+    padding: 2.25rem 1rem 3rem 1rem;
   }
   
   .brand-emblem-img {
-    width: 160px;
-    height: 160px;
+    width: 150px;
+    height: 150px;
   }
 
-  .register-form {
-    flex-direction: column;
-    border-radius: 16px;
-    padding: 0.5rem;
+  .booking-card {
+    border-radius: 14px;
+    min-height: 560px;
   }
 
-  .register-input {
-    padding: 0.65rem 0.75rem;
-  }
-
-  .register-btn {
-    width: 100%;
-    padding: 0.78rem 1rem;
+  .booking-card iframe {
+    min-height: 560px !important;
+    height: 620px !important;
   }
 
   .brand-subline::before,
