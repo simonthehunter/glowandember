@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="assets/css/style.css?v=3">
+  <link rel="stylesheet" href="assets/css/style.css?v=4">
 </head>
 <body>
   <!-- Ambient Warm Canvas Background -->
@@ -47,26 +47,19 @@
     <!-- Master Subline -->
     <h1 class="brand-subline">Radiance &amp; Warmth</h1>
 
-    <!-- Square Appointments Booking Section -->
-    <section class="booking-section" aria-label="Book an Appointment">
-      <div class="booking-header">
-        <h2 class="booking-title">Book an Appointment</h2>
-        <p class="booking-location">9 Craighill Dr, Ballyclare &bull; Andrea Hunter</p>
-      </div>
-
-      <div class="booking-card">
-        <!-- Start Square Appointments Embed Code -->
-        <script src='https://square.site/appointments/buyer/widget/unrrg0p1qt4ar1/LW9BHZQ4T5VW6.js'></script>
-        <!-- End Square Appointments Embed Code -->
-      </div>
-
-      <p class="booking-direct-note">
-        Having trouble viewing the calendar? 
-        <a href="https://square.site/book/LW9BHZQ4T5VW6/glow-and-ember-ballyclare" target="_blank" rel="noopener noreferrer">
-          Open Square Booking directly &rarr;
-        </a>
-      </p>
-    </section>
+    <!-- Booking CTA Action Block -->
+    <div class="booking-cta-block">
+      <a 
+        href="https://square.site/book/LW9BHZQ4T5VW6/glow-and-ember-ballyclare" 
+        class="booking-primary-btn" 
+        target="_blank" 
+        rel="noopener noreferrer"
+      >
+        <span>Book an Appointment</span>
+        <span class="btn-arrow">&rarr;</span>
+      </a>
+      <p class="booking-note">9 Craighill Dr, Ballyclare &bull; Andrea Hunter</p>
+    </div>
 
     <!-- Minimal Footer -->
     <footer class="holding-footer">
@@ -76,6 +69,6 @@
 
   </main>
 
-  <script src="assets/js/main.js?v=3"></script>
+  <script src="assets/js/main.js?v=4"></script>
 </body>
 </html>
