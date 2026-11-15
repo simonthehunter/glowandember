@@ -25,7 +25,7 @@
       "price": 25,
       "duration": 45,
       "badge": "Signature Treatment",
-      "detail": "Mapping, Shaping, Wax & Tint",
+      "detail": "Precision Brow Mapping, Tinting & Waxing",
       "summary": "Our bespoke arch restoration. Includes tailored facial mapping for natural symmetry, custom pigment tinting, precision waxing, and sculpting.",
       "deposit": 15,
       "featured": true
@@ -33,7 +33,7 @@
     {
       "name": "Brow Lamination",
       "price": 30,
-      "duration": 45,
+      "duration": 30,
       "badge": "Trending",
       "detail": "Wax, Tint & Sculpt",
       "summary": "Restructures and relaxes brow hairs for a fuller, brushed-up feathered look. Includes precision wax, custom tint, and setting.",
@@ -65,7 +65,7 @@
     {
       "name": "Lash Lift",
       "price": 20,
-      "duration": 45,
+      "duration": 30,
       "badge": "Root Lift",
       "detail": "Semi-Permanent Curl & Volume",
       "summary": "A gentle semi-permanent treatment that curls and lifts natural lashes from the root, creating an open, wide-awake gaze for weeks.",
@@ -75,11 +75,43 @@
     {
       "name": "Korean Lash Lift",
       "price": 40,
-      "duration": 50,
+      "duration": 40,
       "badge": "Keratin Infusion",
       "detail": "Gentle Keratin Conditioning & Lift",
       "summary": "An advanced nourishing lift utilizing deeply conditioning keratin solutions to strengthen natural lashes while delivering a soft, elegant curl.",
       "deposit": 15,
+      "featured": true
+    }
+  ],
+  "Combos": [
+    {
+      "name": "Signature Brows & Eyelash Tint",
+      "price": 30,
+      "duration": 55,
+      "badge": "Popular Combo",
+      "detail": "Precision Brow Mapping, Tinting, Waxing & Eyelash Tint",
+      "summary": "The complete gaze transformation. Pairs our bespoke signature brow mapping, waxing, and tinting with a rich, glossy lash tint for luminous definition and depth.",
+      "deposit": 15,
+      "featured": true
+    },
+    {
+      "name": "Signature Brows, Lash Lift & Tint",
+      "price": 45,
+      "duration": 55,
+      "badge": "Ultimate Trio",
+      "detail": "Signature Brows + Lash Lift & Lash Tint",
+      "summary": "Our all-in-one enhancement. Combines precision mapped signature brows with a semi-permanent lash lift and deep tint for effortlessly elevated daily radiance.",
+      "deposit": 15,
+      "featured": true
+    },
+    {
+      "name": "Brow Lamination & Korean Lash Lift",
+      "price": 65,
+      "duration": 60,
+      "badge": "Premier Duo",
+      "detail": "Full Brow Lamination + Korean Keratin Lash Lift",
+      "summary": "The pinnacle of brow and lash luxury. Combines full brow lamination, waxing, and sculpting with the gentle, deeply nourishing Korean keratin lash lift for maximum fullness and curl.",
+      "deposit": 20,
       "featured": true
     }
   ],
@@ -93,38 +125,6 @@
       "summary": "Quick, delicate hair removal along the upper lip line for smooth, clear skin using soothing, sensitive hot wax.",
       "deposit": 5,
       "featured": false
-    }
-  ],
-  "Combos": [
-    {
-      "name": "Signature Brows & Lash Tint",
-      "price": 30,
-      "duration": 55,
-      "badge": "Popular Combo",
-      "detail": "Signature Brows + Eyelash Tint",
-      "summary": "The complete gaze transformation. Pairs our bespoke signature brow mapping, waxing, and tinting with a rich, glossy lash tint for luminous definition and depth.",
-      "deposit": 15,
-      "featured": true
-    },
-    {
-      "name": "Signature Brows, Lash Lift & Tint",
-      "price": 45,
-      "duration": 65,
-      "badge": "Ultimate Trio",
-      "detail": "Signature Brows + Lash Lift & Lash Tint",
-      "summary": "Our all-in-one enhancement. Combines precision mapped signature brows with a semi-permanent lash lift and deep tint for effortlessly elevated daily radiance.",
-      "deposit": 15,
-      "featured": true
-    },
-    {
-      "name": "Brow Lamination & Korean Lash Lift",
-      "price": 65,
-      "duration": 75,
-      "badge": "Premier Duo",
-      "detail": "Full Brow Lamination + Korean Keratin Lash Lift",
-      "summary": "The pinnacle of brow and lash luxury. Combines full brow lamination, waxing, and sculpting with the gentle, deeply nourishing Korean keratin lash lift for maximum fullness and curl.",
-      "deposit": 20,
-      "featured": true
     }
   ]
 }
