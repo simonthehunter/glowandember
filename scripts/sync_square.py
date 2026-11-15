@@ -220,12 +220,16 @@ def parse_catalog(catalog_objects):
     items_by_cat = {}
 
     for obj in catalog_objects:
+        if obj.get("is_deleted"):
+            continue
         if obj.get("type") == "CATEGORY":
             cat_data = obj.get("category_data", {})
             name = sanitize_brand_text(cat_data.get("name", "").strip())
             categories[obj["id"]] = name
 
     for obj in catalog_objects:
+        if obj.get("is_deleted"):
+            continue
         if obj.get("type") == "ITEM":
             item_data = obj.get("item_data", {})
             cat_id = item_data.get("category_id")
@@ -241,10 +245,11 @@ def parse_catalog(catalog_objects):
             price = 0
             duration_mins = 30
             if variations:
-                var_data = variations[0].get("item_variation_data", {})
-                price_amount = var_data.get("price_money", {}).get("amount", 0)
+                var_data = variations[0].get("item_variation_data") or {}
+                price_money = var_data.get("price_money") or {}
+                price_amount = price_money.get("amount", 0) or 0
                 price = int(price_amount // 100)
-                duration_ms = var_data.get("service_duration", 1800000)
+                duration_ms = var_data.get("service_duration") or 1800000
                 duration_mins = int(duration_ms // 60000)
 
             fallback = METADATA_FALLBACKS.get(name, {})
@@ -268,6 +273,12 @@ def parse_catalog(catalog_objects):
             }
 
             items_by_cat.setdefault(cat_name, []).append(treatment)
+
+    print(f"[INFO] Parsed {sum(len(v) for v in items_by_cat.values())} treatments across {len(items_by_cat)} categories:")
+    for cat, items in items_by_cat.items():
+        print(f"  [{cat}] ({len(items)} treatments)")
+        for t in items:
+            print(f"    • {t['name']} — £{t['price']} ({t['duration']} mins)")
 
     return items_by_cat
 
