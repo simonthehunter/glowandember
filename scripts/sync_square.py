@@ -16,7 +16,7 @@ SQUARE_API_URL = "https://connect.squareup.com/v2/catalog/list"
 SQUARE_VERSION = "2024-08-21"
 BOOKING_URL = "https://square.site/book/LW9BHZQ4T5VW6/glow-and-ember"
 
-CATEGORY_ORDER = ["Brows", "Eyes", "Lips", "Combos"]
+STANDARD_CATEGORY_ORDER = ["BROWS", "LASHES", "LIPS", "COMBOS"]
 
 # Curated metadata dictionary for brand badges, subtitles & descriptions
 # Used to enrich Square item data when Square only stores title & price
@@ -202,36 +202,23 @@ ITEM_ORDER = {
 
 
 def classify_category(name: str, square_cat: str) -> str:
-    """Intelligently assigns items to Brows, Eyes, Lips, or Combos."""
-    norm_sq = (square_cat or "").strip().lower()
+    """Uses Square Appointments category directly, with fallback heuristics if uncategorized."""
+    if square_cat and square_cat.strip():
+        return square_cat.strip()
 
-    # Direct mapping from Square categories (case-insensitive)
-    if norm_sq in ["brows", "brow"]:
-        return "Brows"
-    elif norm_sq in ["lashes", "lash", "eyes", "eye"]:
-        return "Eyes"
-    elif norm_sq in ["lips", "lip"]:
-        return "Lips"
-    elif norm_sq in ["combos", "combo"]:
-        return "Combos"
-
-    # Intelligent name heuristics if category is unassigned or custom
+    # Intelligent fallback heuristics only if category is unassigned in Square
     lower = name.lower()
-
-    # True combos combine brow + lash/lift or have combo keyword
     if ("brow" in lower and "lash" in lower) or ("lamination" in lower and "lift" in lower) or "combo" in lower:
-        return "Combos"
-    # Facial waxing goes to Lips
+        return "COMBOS"
     elif "lip" in lower or "chin" in lower:
-        return "Lips"
-    # Lash services go to Eyes
-    elif "lash" in lower or ("lift" in lower and "brow" not in lower) or ("eye" in lower and "brow" not in lower):
-        return "Eyes"
-    # Brow services go to Brows
+        return "LIPS"
+    elif "lash" in lower or "lift" in lower or "eye" in lower:
+        return "LASHES"
     elif "brow" in lower:
-        return "Brows"
+        return "BROWS"
     else:
-        return "Lips" if "wax" in lower else "Brows"
+        return "TREATMENTS"
+
 
 
 def sanitize_brand_text(text: str) -> str:
@@ -356,7 +343,6 @@ def get_mock_catalog():
 def parse_catalog(catalog_objects):
     categories = {}
     items_by_cat = {}
-    student_items = []
 
     for obj in catalog_objects:
         if obj.get("is_deleted"):
@@ -410,13 +396,8 @@ def parse_catalog(catalog_objects):
             duration_ms = var_data.get("service_duration") or 1800000
             duration_mins = int(duration_ms // 60000)
 
-            # Route student concession items
+            # Filter out discontinued student items
             if "student" in lower_name:
-                student_items.append({
-                    "name": name,
-                    "price": price,
-                    "duration": duration_mins
-                })
                 continue
 
             target_cat = classify_category(name, square_cat)
@@ -437,7 +418,7 @@ def parse_catalog(catalog_objects):
 
             badge = fallback.get("badge", "Essential")
             deposit = fallback.get("deposit", calculate_deposit(price))
-            featured = fallback.get("featured", ("Signature" in name or "Lamination" in name or target_cat == "Combos"))
+            featured = fallback.get("featured", ("Signature" in name or "Lamination" in name or target_cat.upper() == "COMBOS"))
 
             treatment = {
                 "name": name,
@@ -462,35 +443,32 @@ def parse_catalog(catalog_objects):
         for t in items:
             print(f"    • {t['name']} — £{t['price']} ({t['duration']} mins)")
 
-    if student_items:
-        print(f"[INFO] Found {len(student_items)} student concession items:")
-        for s in student_items:
-            print(f"    🎓 {s['name']} — £{s['price']} ({s['duration']} mins)")
-
     return items_by_cat
 
 
-def generate_html_cards(items_by_cat) -> str:
-    ordered_cats = []
-    for cat in CATEGORY_ORDER:
-        if cat in items_by_cat:
-            ordered_cats.append(cat)
-    for cat in sorted(items_by_cat.keys()):
-        if cat not in ordered_cats:
-            ordered_cats.append(cat)
+def sort_categories(cat_names):
+    def sort_key(name):
+        norm = name.strip().upper()
+        if norm in STANDARD_CATEGORY_ORDER:
+            return (0, STANDARD_CATEGORY_ORDER.index(norm))
+        return (1, norm)
+    return sorted(cat_names, key=sort_key)
 
+
+def generate_html_cards(items_by_cat) -> str:
+    ordered_cats = sort_categories(items_by_cat.keys())
     lines = []
 
     for idx, cat_name in enumerate(ordered_cats, start=1):
         items = items_by_cat[cat_name]
-        cat_slug = cat_name.lower().replace(" ", "-")
+        cat_slug = re.sub(r'[^a-z0-9]+', '-', cat_name.lower()).strip('-')
         is_single = (len(items) == 1)
 
         lines.append(f'      <!-- GROUP {idx}: {cat_name.upper()} -->')
         lines.append(f'      <div class="treatment-group" id="group-{cat_slug}">')
         lines.append('        <div class="menu-category-header">')
         lines.append('          <span class="category-rule"></span>')
-        lines.append(f'          <h3 class="category-title">{cat_name}</h3>')
+        lines.append(f'          <h3 class="category-title">{html.escape(cat_name, quote=False)}</h3>')
         lines.append('          <span class="category-rule right"></span>')
         lines.append('        </div>')
         lines.append('')
