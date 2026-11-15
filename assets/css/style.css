@@ -591,18 +591,10 @@ body {
 .card-footer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding-top: 0.85rem;
   border-top: 1px solid rgba(45, 63, 51, 0.08);
   margin-top: auto;
-  gap: 0.5rem;
-}
-
-.deposit-note {
-  font-size: 0.72rem;
-  color: var(--color-restoration-subtle);
-  letter-spacing: 0.02em;
-  white-space: nowrap;
 }
 
 .card-book-btn {

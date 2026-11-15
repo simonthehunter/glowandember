@@ -228,17 +228,6 @@ def sanitize_brand_text(text: str) -> str:
     return pattern.sub("treatment", text)
 
 
-def calculate_deposit(price: int) -> int:
-    if price <= 12:
-        return 5
-    elif price <= 20:
-        return 10
-    elif price <= 45:
-        return 15
-    else:
-        return 20
-
-
 def fetch_square_catalog(token: str):
     headers = {
         "Square-Version": SQUARE_VERSION,
@@ -417,7 +406,6 @@ def parse_catalog(catalog_objects):
                 summary = fallback.get("summary", "Bespoke beauty treatment tailored to your natural features.")
 
             badge = fallback.get("badge", "Essential")
-            deposit = fallback.get("deposit", calculate_deposit(price))
             featured = fallback.get("featured", ("Signature" in name or "Lamination" in name or target_cat.upper() == "COMBOS"))
 
             treatment = {
@@ -427,7 +415,6 @@ def parse_catalog(catalog_objects):
                 "badge": badge,
                 "detail": detail,
                 "summary": summary,
-                "deposit": deposit,
                 "featured": featured
             }
 
@@ -501,7 +488,6 @@ def generate_html_cards(items_by_cat) -> str:
             lines.append(f'              {summary_escaped}')
             lines.append('            </p>')
             lines.append('            <div class="card-footer">')
-            lines.append(f'              <span class="deposit-note">Deposit: &pound;{item["deposit"]}</span>')
             lines.append('              <a ')
             lines.append(f'                href="{BOOKING_URL}" ')
             lines.append('                class="card-book-btn" ')
