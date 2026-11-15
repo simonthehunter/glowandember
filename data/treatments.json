@@ -1,5 +1,5 @@
 {
-  "Brows": [
+  "Treatments": [
     {
       "name": "Eyebrow Wax",
       "price": 10,
@@ -26,17 +26,67 @@
       "duration": 45,
       "badge": "Signature Treatment",
       "detail": "Mapping, Shaping, Wax & Tint",
-      "summary": "Our bespoke arch restoration. Includes tailored facial mapping for natural symmetry, custom pigment tinting, precision waxing, and sculpting.",
+      "summary": "Precision Brow Mapping, Tinting & Waxing",
+      "deposit": 15,
+      "featured": true
+    },
+    {
+      "name": "Eyelash Tint",
+      "price": 10,
+      "duration": 30,
+      "badge": "Lash Enhancement",
+      "detail": "Glossy Deep Pigment Tinting",
+      "summary": "Deep, glossy lash enhancement that creates the appearance of longer, naturally darker lashes from root to tip without mascara.",
+      "deposit": 5,
+      "featured": false
+    },
+    {
+      "name": "Signature Brows & Eyelash Tint",
+      "price": 30,
+      "duration": 55,
+      "badge": "Essential",
+      "detail": "55 mins tailored treatment",
+      "summary": "Precision Brow Mapping, Tinting, Waxing & Eyelash Tint",
+      "deposit": 15,
+      "featured": true
+    },
+    {
+      "name": "Patch Test",
+      "price": 0,
+      "duration": 10,
+      "badge": "Essential",
+      "detail": "10 mins tailored treatment",
+      "summary": "A patch test is a quick, skin-friendly service that checks compatibility with our products and treatments. The test is easy to apply and helps identify potential sensitivities, prioritising your safety and comfort. Book your individual appointment today to confidently proceed with your personalised skincare or beauty treatments.",
+      "deposit": 5,
+      "featured": false
+    },
+    {
+      "name": "Student - Signature Brows",
+      "price": 20,
+      "duration": 45,
+      "badge": "Essential",
+      "detail": "45 mins tailored treatment",
+      "summary": "Precision Brow Mapping, Tinting & Waxing.\nStudent ID must be provided at the appointment",
+      "deposit": 10,
+      "featured": true
+    },
+    {
+      "name": "Student - Signature Brows & Eyelash Tint",
+      "price": 25,
+      "duration": 55,
+      "badge": "Essential",
+      "detail": "55 mins tailored treatment",
+      "summary": "Precision Brow Mapping, Tinting, Waxing & Eyelash Tint.\nStudent ID must be provided at the appointment",
       "deposit": 15,
       "featured": true
     },
     {
       "name": "Brow Lamination",
       "price": 30,
-      "duration": 45,
+      "duration": 30,
       "badge": "Trending",
       "detail": "Wax, Tint & Sculpt",
-      "summary": "Restructures and relaxes brow hairs for a fuller, brushed-up feathered look. Includes precision wax, custom tint, and setting.",
+      "summary": "Wax, Tint & Sculpt",
       "deposit": 15,
       "featured": true
     },
@@ -49,23 +99,11 @@
       "summary": "Subtle, natural grooming tailored specifically for male brow structure—maintaining clean, masculine arches without looking over-styled.",
       "deposit": 5,
       "featured": false
-    }
-  ],
-  "Eyes": [
-    {
-      "name": "Eyelash Tint",
-      "price": 10,
-      "duration": 30,
-      "badge": "Lash Enhancement",
-      "detail": "Glossy Deep Pigment Tinting",
-      "summary": "Deep, glossy lash enhancement that creates the appearance of longer, naturally darker lashes from root to tip without mascara.",
-      "deposit": 5,
-      "featured": false
     },
     {
       "name": "Lash Lift",
       "price": 20,
-      "duration": 45,
+      "duration": 30,
       "badge": "Root Lift",
       "detail": "Semi-Permanent Curl & Volume",
       "summary": "A gentle semi-permanent treatment that curls and lifts natural lashes from the root, creating an open, wide-awake gaze for weeks.",
@@ -75,15 +113,13 @@
     {
       "name": "Korean Lash Lift",
       "price": 40,
-      "duration": 50,
+      "duration": 40,
       "badge": "Keratin Infusion",
       "detail": "Gentle Keratin Conditioning & Lift",
       "summary": "An advanced nourishing lift utilizing deeply conditioning keratin solutions to strengthen natural lashes while delivering a soft, elegant curl.",
       "deposit": 15,
       "featured": true
-    }
-  ],
-  "Lips": [
+    },
     {
       "name": "Lip Waxing",
       "price": 8,
@@ -93,23 +129,11 @@
       "summary": "Quick, delicate hair removal along the upper lip line for smooth, clear skin using soothing, sensitive hot wax.",
       "deposit": 5,
       "featured": false
-    }
-  ],
-  "Combos": [
-    {
-      "name": "Signature Brows & Lash Tint",
-      "price": 30,
-      "duration": 55,
-      "badge": "Popular Combo",
-      "detail": "Signature Brows + Eyelash Tint",
-      "summary": "The complete gaze transformation. Pairs our bespoke signature brow mapping, waxing, and tinting with a rich, glossy lash tint for luminous definition and depth.",
-      "deposit": 15,
-      "featured": true
     },
     {
       "name": "Signature Brows, Lash Lift & Tint",
       "price": 45,
-      "duration": 65,
+      "duration": 55,
       "badge": "Ultimate Trio",
       "detail": "Signature Brows + Lash Lift & Lash Tint",
       "summary": "Our all-in-one enhancement. Combines precision mapped signature brows with a semi-permanent lash lift and deep tint for effortlessly elevated daily radiance.",
@@ -119,7 +143,7 @@
     {
       "name": "Brow Lamination & Korean Lash Lift",
       "price": 65,
-      "duration": 75,
+      "duration": 60,
       "badge": "Premier Duo",
       "detail": "Full Brow Lamination + Korean Keratin Lash Lift",
       "summary": "The pinnacle of brow and lash luxury. Combines full brow lamination, waxing, and sculpting with the gentle, deeply nourishing Korean keratin lash lift for maximum fullness and curl.",
