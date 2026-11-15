@@ -25,104 +25,116 @@
       "price": 25,
       "duration": 45,
       "badge": "Signature Treatment",
-      "detail": "Precision Brow Mapping, Tinting & Waxing",
-      "summary": "Our bespoke arch restoration. Includes tailored facial mapping for natural symmetry, custom pigment tinting, precision waxing, and sculpting.",
+      "detail": "Mapping, Shaping, Wax & Tint",
+      "summary": "Signature brows - combines precision mapping, tinting, and waxing to shape the brow to suit your facial structure.",
       "deposit": 15,
       "featured": true
     },
     {
       "name": "Brow Lamination",
-      "price": 30,
-      "duration": 30,
+      "price": 35,
+      "duration": 60,
       "badge": "Trending",
       "detail": "Wax, Tint & Sculpt",
-      "summary": "Restructures and relaxes brow hairs for a fuller, brushed-up feathered look. Includes precision wax, custom tint, and setting.",
+      "summary": "A semi-permanent treatment that smooths, lifts, and sets unruly or sparse brow hairs into a fuller, fluffy brow shape. Results last 4-6 weeks. Includes a custom tint and brow wax.",
       "deposit": 15,
       "featured": true
     },
     {
-      "name": "Male Brows",
-      "price": 12,
-      "duration": 30,
-      "badge": "Men's Grooming",
-      "detail": "Subtle Definition & Tidy",
-      "summary": "Subtle, natural grooming tailored specifically for male brow structure—maintaining clean, masculine arches without looking over-styled.",
-      "deposit": 5,
+      "name": "Hybrid Brows",
+      "price": 28,
+      "duration": 60,
+      "badge": "Essential",
+      "detail": "Precision Wax, Tint & Shape",
+      "summary": "Precision Wax, Tint & Shape",
+      "deposit": 15,
       "featured": false
     }
   ],
   "Eyes": [
     {
       "name": "Eyelash Tint",
-      "price": 10,
+      "price": 15,
       "duration": 30,
       "badge": "Lash Enhancement",
       "detail": "Glossy Deep Pigment Tinting",
       "summary": "Deep, glossy lash enhancement that creates the appearance of longer, naturally darker lashes from root to tip without mascara.",
       "deposit": 5,
       "featured": false
-    },
-    {
-      "name": "Lash Lift",
-      "price": 20,
-      "duration": 30,
-      "badge": "Root Lift",
-      "detail": "Semi-Permanent Curl & Volume",
-      "summary": "A gentle semi-permanent treatment that curls and lifts natural lashes from the root, creating an open, wide-awake gaze for weeks.",
-      "deposit": 10,
-      "featured": false
-    },
-    {
-      "name": "Korean Lash Lift",
-      "price": 40,
-      "duration": 40,
-      "badge": "Keratin Infusion",
-      "detail": "Gentle Keratin Conditioning & Lift",
-      "summary": "An advanced nourishing lift utilizing deeply conditioning keratin solutions to strengthen natural lashes while delivering a soft, elegant curl.",
-      "deposit": 15,
-      "featured": true
     }
   ],
   "Combos": [
     {
-      "name": "Signature Brows & Eyelash Tint",
-      "price": 30,
-      "duration": 55,
-      "badge": "Popular Combo",
-      "detail": "Precision Brow Mapping, Tinting, Waxing & Eyelash Tint",
-      "summary": "The complete gaze transformation. Pairs our bespoke signature brow mapping, waxing, and tinting with a rich, glossy lash tint for luminous definition and depth.",
-      "deposit": 15,
-      "featured": true
-    },
-    {
       "name": "Signature Brows, Lash Lift & Tint",
-      "price": 45,
-      "duration": 55,
+      "price": 50,
+      "duration": 90,
       "badge": "Ultimate Trio",
       "detail": "Signature Brows + Lash Lift & Lash Tint",
-      "summary": "Our all-in-one enhancement. Combines precision mapped signature brows with a semi-permanent lash lift and deep tint for effortlessly elevated daily radiance.",
+      "summary": "Combines precision brow mapping, tinting, and waxing to shape the brow to suit your facial structure, together with a lash lift & tint",
       "deposit": 15,
       "featured": true
     },
     {
-      "name": "Brow Lamination & Korean Lash Lift",
-      "price": 65,
-      "duration": 60,
-      "badge": "Premier Duo",
-      "detail": "Full Brow Lamination + Korean Keratin Lash Lift",
-      "summary": "The pinnacle of brow and lash luxury. Combines full brow lamination, waxing, and sculpting with the gentle, deeply nourishing Korean keratin lash lift for maximum fullness and curl.",
+      "name": "Lash Lift & Tint",
+      "price": 30,
+      "duration": 45,
+      "badge": "Essential",
+      "detail": "45 mins tailored treatment",
+      "summary": "Bespoke beauty treatment tailored to your natural features.",
+      "deposit": 15,
+      "featured": true
+    },
+    {
+      "name": "Korean Lash Lift & Tint",
+      "price": 45,
+      "duration": 90,
+      "badge": "Essential",
+      "detail": "90 mins tailored treatment",
+      "summary": "A Korean lash lift is a modern, gentle treatment that curls, lifts and nourishes your natural lashes from the root - no extensions or harsh perming chemicals. The result is a more noticeable, wide-eyed effect, finished with a tint for added depth.",
+      "deposit": 15,
+      "featured": true
+    },
+    {
+      "name": "Brow Lamination & Korean Lash Lift & Tint",
+      "price": 75,
+      "duration": 105,
+      "badge": "Essential",
+      "detail": "105 mins tailored treatment",
+      "summary": "A semi-permanent treatment that smooths, lifts, and sets unruly or sparse brow hairs into a fuller, fluffy brow shape. Results last 4-6 weeks. Includes a custom tint and brow wax. A Korean lash lift is a modern, gentle treatment that curls, lifts and nourishes your natural lashes from the root - no extensions or harsh perming chemicals. The result is a more noticeable, wide-eyed effect, finished with a tint for added depth.",
+      "deposit": 20,
+      "featured": true
+    },
+    {
+      "name": "Hybrid Brows & Korean Lash Lift & Tint",
+      "price": 70,
+      "duration": 105,
+      "badge": "Essential",
+      "detail": "105 mins tailored treatment",
+      "summary": "Hybrid brows follow similar shaping steps to a standard brow, but upgrades the colour to a hybrid stain, creating a fuller, makeup-like finish. The Korean lash lift is a modern, gentle treatment that curls, lifts and nourishes your natural lashes from the root - no extensions or harsh perming chemicals. The result is a more noticeable, wide-eyed effect, finished with a tint for added depth.",
       "deposit": 20,
       "featured": true
     }
   ],
   "Lips": [
     {
-      "name": "Lip Waxing",
-      "price": 8,
+      "name": "Lip Wax",
+      "price": 5,
       "duration": 15,
-      "badge": "Delicate Wax",
-      "detail": "Gentle Upper Lip Hair Removal",
-      "summary": "Quick, delicate hair removal along the upper lip line for smooth, clear skin using soothing, sensitive hot wax.",
+      "badge": "Essential",
+      "detail": "15 mins tailored treatment",
+      "summary": "Bespoke beauty treatment tailored to your natural features.",
+      "deposit": 5,
+      "featured": false
+    }
+  ],
+  "Treatments": [
+    {
+      "name": "Chin Wax",
+      "price": 5,
+      "duration": 15,
+      "badge": "Essential",
+      "detail": "15 mins tailored treatment",
+      "summary": "Bespoke beauty treatment tailored to your natural features.",
       "deposit": 5,
       "featured": false
     }
