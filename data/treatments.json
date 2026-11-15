@@ -39,6 +39,16 @@
       "summary": "A semi-permanent treatment that smooths, lifts, and sets unruly or sparse brow hairs into a fuller, fluffy brow shape. Results last 4-6 weeks. Includes a custom tint and brow wax.",
       "deposit": 15,
       "featured": true
+    },
+    {
+      "name": "Hybrid Brows",
+      "price": 28,
+      "duration": 60,
+      "badge": "Precision Stain",
+      "detail": "Precision Wax, Tint & Shape",
+      "summary": "Upgrades traditional tinting to a long-lasting hybrid stain for a richer, bolder, makeup-like finish combined with custom mapping and precision wax.",
+      "deposit": 15,
+      "featured": false
     }
   ],
   "Eyes": [
