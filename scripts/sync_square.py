@@ -14,7 +14,10 @@ DATA_FILE = REPO_ROOT / "data" / "treatments.json"
 
 SQUARE_API_URL = "https://connect.squareup.com/v2/catalog/list"
 SQUARE_VERSION = "2024-08-21"
-BOOKING_URL = "https://square.site/book/LW9BHZQ4T5VW6/glow-and-ember"
+GENERAL_BOOKING_URL = "https://square.site/book/LW9BHZQ4T5VW6/glow-and-ember"
+SQUARE_SELLER_ID = "unrrg0p1qt4ar1"
+SQUARE_LOCATION_ID = "LW9BHZQ4T5VW6"
+DIRECT_SERVICE_BASE_URL = f"https://book.squareup.com/appointments/{SQUARE_SELLER_ID}/location/{SQUARE_LOCATION_ID}/services"
 
 STANDARD_CATEGORY_ORDER = ["BROWS", "LASHES", "LIPS", "COMBOS"]
 
@@ -267,62 +270,62 @@ def get_mock_catalog():
         {"type": "CATEGORY", "id": "cat_lips", "category_data": {"name": "LIPS"}},
         {"type": "CATEGORY", "id": "cat_combos", "category_data": {"name": "COMBOS"}},
         # Brows
-        {"type": "ITEM", "id": "item_1", "item_data": {
+        {"type": "ITEM", "id": "ML56MAVUBSOKUID7PRBY5GM5", "item_data": {
             "name": "Eyebrow Wax", "category_id": "cat_brows",
             "variations": [{"item_variation_data": {"price_money": {"amount": 1000}, "service_duration": 1800000}}]
         }},
-        {"type": "ITEM", "id": "item_2", "item_data": {
+        {"type": "ITEM", "id": "QEYAU65KF5VPPULLUDFEQNSU", "item_data": {
             "name": "Eyebrow Tint", "category_id": "cat_brows",
             "variations": [{"item_variation_data": {"price_money": {"amount": 1000}, "service_duration": 1800000}}]
         }},
-        {"type": "ITEM", "id": "item_3", "item_data": {
+        {"type": "ITEM", "id": "C6OTZGF4HB6M44FPARPLXUAU", "item_data": {
             "name": "Signature Brows", "category_id": "cat_brows",
             "description": "Mapping, Shaping, Wax & Tint",
             "variations": [{"item_variation_data": {"price_money": {"amount": 2500}, "service_duration": 2700000}}]
         }},
-        {"type": "ITEM", "id": "item_4", "item_data": {
+        {"type": "ITEM", "id": "3QYQI2DONVO6WEXAK7STBQ5B", "item_data": {
             "name": "Brow Lamination", "category_id": "cat_brows",
             "description": "Wax, Tint & Sculpt",
             "variations": [{"item_variation_data": {"price_money": {"amount": 3500}, "service_duration": 3600000}}]
         }},
-        {"type": "ITEM", "id": "item_5", "item_data": {
+        {"type": "ITEM", "id": "3K2IR7E7Q6Y5QMMN5V556GP2", "item_data": {
             "name": "Hybrid Brows", "category_id": "cat_brows",
             "description": "Precision Wax, Tint & Shape",
             "variations": [{"item_variation_data": {"price_money": {"amount": 2800}, "service_duration": 3600000}}]
         }},
         # Lashes / Eyes
-        {"type": "ITEM", "id": "item_6", "item_data": {
+        {"type": "ITEM", "id": "P5TIG5BXLDG54LQUTZASJKFS", "item_data": {
             "name": "Eyelash Tint", "category_id": "cat_lashes",
             "variations": [{"item_variation_data": {"price_money": {"amount": 1500}, "service_duration": 1800000}}]
         }},
-        {"type": "ITEM", "id": "item_7", "item_data": {
+        {"type": "ITEM", "id": "BONXXBBDRHVVCCEFTNMMQDXF", "item_data": {
             "name": "Lash Lift & Tint", "category_id": "cat_lashes",
             "variations": [{"item_variation_data": {"price_money": {"amount": 3000}, "service_duration": 2700000}}]
         }},
-        {"type": "ITEM", "id": "item_8", "item_data": {
+        {"type": "ITEM", "id": "DQBKGQBP4F4GAXXTVXMFQIN2", "item_data": {
             "name": "Korean Lash Lift & Tint", "category_id": "cat_lashes",
             "variations": [{"item_variation_data": {"price_money": {"amount": 4500}, "service_duration": 5400000}}]
         }},
         # Combos
-        {"type": "ITEM", "id": "item_9", "item_data": {
+        {"type": "ITEM", "id": "T35FIRCLMQJPM3WXSHEWW7G2", "item_data": {
             "name": "Signature Brows, Lash Lift & Tint", "category_id": "cat_combos",
             "description": "Signature Brows + Lash Lift & Lash Tint",
             "variations": [{"item_variation_data": {"price_money": {"amount": 5000}, "service_duration": 5400000}}]
         }},
-        {"type": "ITEM", "id": "item_10", "item_data": {
+        {"type": "ITEM", "id": "IHZXJJZUT355SIRMZOGUJLL5", "item_data": {
             "name": "Brow Lamination & Korean Lash Lift & Tint", "category_id": "cat_combos",
             "variations": [{"item_variation_data": {"price_money": {"amount": 7500}, "service_duration": 6300000}}]
         }},
-        {"type": "ITEM", "id": "item_11", "item_data": {
+        {"type": "ITEM", "id": "6SK2K26NU2S4ROB365JV5IG3", "item_data": {
             "name": "Hybrid Brows & Korean Lash Lift & Tint", "category_id": "cat_combos",
             "variations": [{"item_variation_data": {"price_money": {"amount": 7000}, "service_duration": 6300000}}]
         }},
         # Lips
-        {"type": "ITEM", "id": "item_12", "item_data": {
+        {"type": "ITEM", "id": "AL3UHSWWGMQFF3HM6AYID7M7", "item_data": {
             "name": "Lip Wax", "category_id": "cat_lips",
             "variations": [{"item_variation_data": {"price_money": {"amount": 500}, "service_duration": 900000}}]
         }},
-        {"type": "ITEM", "id": "item_13", "item_data": {
+        {"type": "ITEM", "id": "YHHTKV3BMX2IUG3ZVZSVKS5P", "item_data": {
             "name": "Chin Wax", "category_id": "cat_lips",
             "variations": [{"item_variation_data": {"price_money": {"amount": 500}, "service_duration": 900000}}]
         }}
@@ -407,15 +410,19 @@ def parse_catalog(catalog_objects):
 
             badge = fallback.get("badge", "Essential")
             featured = fallback.get("featured", ("Signature" in name or "Lamination" in name or target_cat.upper() == "COMBOS"))
+            item_id = obj.get("id", "")
+            booking_url = f"{DIRECT_SERVICE_BASE_URL}/{item_id}" if item_id else GENERAL_BOOKING_URL
 
             treatment = {
+                "id": item_id,
                 "name": name,
                 "price": price,
                 "duration": duration_mins,
                 "badge": badge,
                 "detail": detail,
                 "summary": summary,
-                "featured": featured
+                "featured": featured,
+                "booking_url": booking_url
             }
 
             items_by_cat.setdefault(target_cat, []).append(treatment)
@@ -487,9 +494,10 @@ def generate_html_cards(items_by_cat) -> str:
             lines.append('            <p class="treatment-summary">')
             lines.append(f'              {summary_escaped}')
             lines.append('            </p>')
+            booking_url = item.get("booking_url") or GENERAL_BOOKING_URL
             lines.append('            <div class="card-footer">')
             lines.append('              <a ')
-            lines.append(f'                href="{BOOKING_URL}" ')
+            lines.append(f'                href="{booking_url}" ')
             lines.append('                class="card-book-btn" ')
             lines.append('                target="_blank" ')
             lines.append('                rel="noopener noreferrer"')
