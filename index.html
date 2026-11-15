@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="assets/css/style.css?v=6">
+  <link rel="stylesheet" href="assets/css/style.css?v=7">
 </head>
 <body>
   <!-- Ambient Warm Canvas Background -->
@@ -97,88 +97,23 @@
     <!-- TREATMENTS SECTION -->
     <section class="section-container" id="treatments">
       <div class="section-header">
-        <span class="section-tagline">Treatment Menu</span>
-        <h2 class="section-title">Bespoke Brow &amp; Lash Rituals</h2>
+        <span class="section-tagline">Boutique Studio</span>
+        <h2 class="section-title">Treatment Menu</h2>
         <div class="section-divider"></div>
         <p class="section-desc">
           Every appointment is tailored to your unique facial geometry, bone structure, and natural coloring for timeless, effortless radiance.
         </p>
       </div>
 
-      <!-- Signature Treatments (Highlighted) -->
-      <div class="treatment-group">
-        <div class="group-header">
-          <span class="spark-icon">✦</span>
-          <h3 class="group-title">Signature Treatments</h3>
+      <!-- GROUP 1: BROWS -->
+      <div class="treatment-group" id="group-brows">
+        <div class="menu-category-header">
+          <span class="category-rule"></span>
+          <h3 class="category-title">Brows</h3>
+          <span class="category-rule right"></span>
         </div>
 
-        <div class="signature-grid">
-          <!-- Signature Brows -->
-          <article class="treatment-card featured-card">
-            <div class="card-top">
-              <span class="treatment-badge">Signature Ritual</span>
-              <div class="price-lockup">
-                <span class="price">&pound;25</span>
-                <span class="duration">45 mins</span>
-              </div>
-            </div>
-            <h4 class="treatment-name">Signature Brows</h4>
-            <p class="treatment-detail">Precision Brow Mapping, Tinting &amp; Waxing</p>
-            <p class="treatment-summary">
-              A bespoke arch restoration. Includes meticulous brow mapping to balance your natural symmetry, customized pigment formulation, and gentle precision waxing with tailored finishing.
-            </p>
-            <div class="card-footer">
-              <span class="deposit-note">Deposit: &pound;15</span>
-              <a 
-                href="https://square.site/book/LW9BHZQ4T5VW6/glow-and-ember" 
-                class="card-book-btn" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <span>Book Treatment</span>
-                <span class="arrow">&rarr;</span>
-              </a>
-            </div>
-          </article>
-
-          <!-- Signature Brows & Lash Tint -->
-          <article class="treatment-card featured-card">
-            <div class="card-top">
-              <span class="treatment-badge">Complete Ritual</span>
-              <div class="price-lockup">
-                <span class="price">&pound;30</span>
-                <span class="duration">55 mins</span>
-              </div>
-            </div>
-            <h4 class="treatment-name">Signature Brows &amp; Eyelash Tint</h4>
-            <p class="treatment-detail">Precision Brow Mapping, Tinting, Waxing &amp; Eyelash Tint</p>
-            <p class="treatment-summary">
-              The complete gaze transformation. Pairs the full signature brow mapping and waxing ritual with a rich, glossy lash tint that brings depth and luminous definition to your eyes.
-            </p>
-            <div class="card-footer">
-              <span class="deposit-note">Deposit: &pound;15</span>
-              <a 
-                href="https://square.site/book/LW9BHZQ4T5VW6/glow-and-ember" 
-                class="card-book-btn" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <span>Book Treatment</span>
-                <span class="arrow">&rarr;</span>
-              </a>
-            </div>
-          </article>
-        </div>
-      </div>
-
-      <!-- Essential Treatments Grid -->
-      <div class="treatment-group">
-        <div class="group-header">
-          <span class="spark-icon">✦</span>
-          <h3 class="group-title">Individual Essentials</h3>
-        </div>
-
-        <div class="essentials-grid">
+        <div class="category-cards-grid">
           <!-- Eyebrow Wax -->
           <article class="treatment-card standard-card">
             <div class="card-top">
@@ -231,17 +166,73 @@
             </div>
           </article>
 
-          <!-- Eyelash Tint -->
+          <!-- Signature Brows (Featured) -->
+          <article class="treatment-card featured-card">
+            <div class="card-top">
+              <span class="treatment-badge">Signature Treatment</span>
+              <div class="price-lockup">
+                <span class="price">&pound;25</span>
+                <span class="duration">45 mins</span>
+              </div>
+            </div>
+            <h4 class="treatment-name">Signature Brows</h4>
+            <p class="treatment-detail">Mapping, Shaping, Wax &amp; Tint</p>
+            <p class="treatment-summary">
+              A bespoke arch restoration. Includes meticulous brow mapping to balance your natural symmetry, customized pigment formulation, gentle waxing, and precision shaping for effortless definition.
+            </p>
+            <div class="card-footer">
+              <span class="deposit-note">Deposit: &pound;15</span>
+              <a 
+                href="https://square.site/book/LW9BHZQ4T5VW6/glow-and-ember" 
+                class="card-book-btn" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <span>Book Treatment</span>
+                <span class="arrow">&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Brow Lamination (Featured) -->
+          <article class="treatment-card featured-card">
+            <div class="card-top">
+              <span class="treatment-badge">Trending</span>
+              <div class="price-lockup">
+                <span class="price">&pound;30</span>
+                <span class="duration">45 mins</span>
+              </div>
+            </div>
+            <h4 class="treatment-name">Brow Lamination</h4>
+            <p class="treatment-detail">Wax, Tint &amp; Sculpt</p>
+            <p class="treatment-summary">
+              Restructures and relaxes the brow hairs for a fuller, brushed-up, feathered finish. Includes gentle precision waxing, custom tinting, and sculpting for perfectly set arches.
+            </p>
+            <div class="card-footer">
+              <span class="deposit-note">Deposit: &pound;15</span>
+              <a 
+                href="https://square.site/book/LW9BHZQ4T5VW6/glow-and-ember" 
+                class="card-book-btn" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <span>Book Treatment</span>
+                <span class="arrow">&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Male Brows -->
           <article class="treatment-card standard-card">
             <div class="card-top">
-              <h4 class="treatment-name">Eyelash Tint</h4>
+              <h4 class="treatment-name">Male Brows</h4>
               <div class="price-lockup">
-                <span class="price">&pound;10</span>
+                <span class="price">&pound;12</span>
                 <span class="duration">30 mins</span>
               </div>
             </div>
             <p class="treatment-summary">
-              Deep, glossy lash enhancement that creates the appearance of longer, naturally darker lashes.
+              Subtle, natural grooming and tidying tailored specifically for male brow structure—maintaining a clean, masculine arch without looking over-styled.
             </p>
             <div class="card-footer">
               <span class="deposit-note">Deposit: &pound;5</span>
@@ -259,24 +250,259 @@
         </div>
       </div>
 
-      <!-- Student Concessions -->
-      <div class="treatment-group">
-        <div class="student-banner">
-          <div class="student-info">
-            <div class="student-header">
-              <span class="student-tag">Student Concession</span>
-              <span class="student-id-notice">Student ID must be provided at the appointment</span>
+      <!-- GROUP 2: EYES -->
+      <div class="treatment-group" id="group-eyes">
+        <div class="menu-category-header">
+          <span class="category-rule"></span>
+          <h3 class="category-title">Eyes</h3>
+          <span class="category-rule right"></span>
+        </div>
+
+        <div class="category-cards-grid">
+          <!-- Eyelash Tint -->
+          <article class="treatment-card standard-card">
+            <div class="card-top">
+              <h4 class="treatment-name">Eyelash Tint</h4>
+              <div class="price-lockup">
+                <span class="price">&pound;10</span>
+                <span class="duration">30 mins</span>
+              </div>
             </div>
-            <p class="student-desc">
-              Dedicated student pricing on signature brow and lash rituals. Please present a valid student ID during your appointment.
+            <p class="treatment-summary">
+              Deep, glossy lash enhancement that creates the appearance of longer, naturally darker lashes from root to tip without mascara.
             </p>
+            <div class="card-footer">
+              <span class="deposit-note">Deposit: &pound;5</span>
+              <a 
+                href="https://square.site/book/LW9BHZQ4T5VW6/glow-and-ember" 
+                class="card-book-btn" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <span>Book</span>
+                <span class="arrow">&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Lash Lift -->
+          <article class="treatment-card standard-card">
+            <div class="card-top">
+              <h4 class="treatment-name">Lash Lift</h4>
+              <div class="price-lockup">
+                <span class="price">&pound;20</span>
+                <span class="duration">45 mins</span>
+              </div>
+            </div>
+            <p class="treatment-summary">
+              A gentle semi-permanent treatment that lifts and curls your natural lashes from the root, creating an open, wide-awake gaze that lasts for weeks.
+            </p>
+            <div class="card-footer">
+              <span class="deposit-note">Deposit: &pound;10</span>
+              <a 
+                href="https://square.site/book/LW9BHZQ4T5VW6/glow-and-ember" 
+                class="card-book-btn" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <span>Book</span>
+                <span class="arrow">&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Korean Lash Lift (Featured) -->
+          <article class="treatment-card featured-card">
+            <div class="card-top">
+              <span class="treatment-badge">Keratin Infusion</span>
+              <div class="price-lockup">
+                <span class="price">&pound;40</span>
+                <span class="duration">50 mins</span>
+              </div>
+            </div>
+            <h4 class="treatment-name">Korean Lash Lift</h4>
+            <p class="treatment-detail">Gentle Keratin Conditioning &amp; Lift</p>
+            <p class="treatment-summary">
+              An advanced, nourishing lifting technique utilizing deeply conditioning keratin solutions to strengthen natural lashes while delivering a soft, elegant, damage-free curl.
+            </p>
+            <div class="card-footer">
+              <span class="deposit-note">Deposit: &pound;15</span>
+              <a 
+                href="https://square.site/book/LW9BHZQ4T5VW6/glow-and-ember" 
+                class="card-book-btn" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <span>Book Treatment</span>
+                <span class="arrow">&rarr;</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- GROUP 3: LIPS -->
+      <div class="treatment-group" id="group-lips">
+        <div class="menu-category-header">
+          <span class="category-rule"></span>
+          <h3 class="category-title">Lips</h3>
+          <span class="category-rule right"></span>
+        </div>
+
+        <div class="single-card-wrap">
+          <!-- Lip Waxing -->
+          <article class="treatment-card standard-card">
+            <div class="card-top">
+              <h4 class="treatment-name">Lip Waxing</h4>
+              <div class="price-lockup">
+                <span class="price">&pound;8</span>
+                <span class="duration">15 mins</span>
+              </div>
+            </div>
+            <p class="treatment-summary">
+              Quick, delicate hair removal along the upper lip line for smooth, clear skin using soothing, sensitive hot wax.
+            </p>
+            <div class="card-footer">
+              <span class="deposit-note">Deposit: &pound;5</span>
+              <a 
+                href="https://square.site/book/LW9BHZQ4T5VW6/glow-and-ember" 
+                class="card-book-btn" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <span>Book</span>
+                <span class="arrow">&rarr;</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- GROUP 4: COMBOS -->
+      <div class="treatment-group" id="group-combos">
+        <div class="menu-category-header">
+          <span class="category-rule"></span>
+          <h3 class="category-title">Combos</h3>
+          <span class="category-rule right"></span>
+        </div>
+
+        <div class="category-cards-grid">
+          <!-- Signature Brows & Lash Tint (Capitalization fixed) -->
+          <article class="treatment-card featured-card">
+            <div class="card-top">
+              <span class="treatment-badge">Popular Combo</span>
+              <div class="price-lockup">
+                <span class="price">&pound;30</span>
+                <span class="duration">55 mins</span>
+              </div>
+            </div>
+            <h4 class="treatment-name">Signature Brows &amp; Lash Tint</h4>
+            <p class="treatment-detail">Precision Brow Mapping, Tint &amp; Wax + Eyelash Tint</p>
+            <p class="treatment-summary">
+              The complete gaze transformation. Pairs our bespoke signature brow mapping, waxing, and tinting with a rich, glossy lash tint for luminous definition and depth.
+            </p>
+            <div class="card-footer">
+              <span class="deposit-note">Deposit: &pound;15</span>
+              <a 
+                href="https://square.site/book/LW9BHZQ4T5VW6/glow-and-ember" 
+                class="card-book-btn" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <span>Book Treatment</span>
+                <span class="arrow">&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Signature Brows, Lash Lift & Tint -->
+          <article class="treatment-card featured-card">
+            <div class="card-top">
+              <span class="treatment-badge">Ultimate Trio</span>
+              <div class="price-lockup">
+                <span class="price">&pound;45</span>
+                <span class="duration">65 mins</span>
+              </div>
+            </div>
+            <h4 class="treatment-name">Signature Brows, Lash Lift &amp; Tint</h4>
+            <p class="treatment-detail">Signature Brows + Lash Lift &amp; Lash Tint</p>
+            <p class="treatment-summary">
+              Our all-in-one enhancement. Combines precision mapped signature brows with a semi-permanent lash lift and deep tint for effortlessly elevated daily radiance.
+            </p>
+            <div class="card-footer">
+              <span class="deposit-note">Deposit: &pound;15</span>
+              <a 
+                href="https://square.site/book/LW9BHZQ4T5VW6/glow-and-ember" 
+                class="card-book-btn" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <span>Book Treatment</span>
+                <span class="arrow">&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Brow Lamination & Korean Lash Lift -->
+          <article class="treatment-card featured-card">
+            <div class="card-top">
+              <span class="treatment-badge">Premier Duo</span>
+              <div class="price-lockup">
+                <span class="price">&pound;65</span>
+                <span class="duration">75 mins</span>
+              </div>
+            </div>
+            <h4 class="treatment-name">Brow Lamination &amp; Korean Lash Lift</h4>
+            <p class="treatment-detail">Full Brow Lamination + Korean Keratin Lash Lift</p>
+            <p class="treatment-summary">
+              The pinnacle of brow and lash luxury. Combines full brow lamination, waxing, and sculpting with the gentle, deeply nourishing Korean keratin lash lift for maximum fullness and elegant curl.
+            </p>
+            <div class="card-footer">
+              <span class="deposit-note">Deposit: &pound;20</span>
+              <a 
+                href="https://square.site/book/LW9BHZQ4T5VW6/glow-and-ember" 
+                class="card-book-btn" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <span>Book Treatment</span>
+                <span class="arrow">&rarr;</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Student Concessions Banner matching the printed menu -->
+      <div class="treatment-group" id="student-discount">
+        <div class="student-banner">
+          <div class="student-notice-box">
+            <span class="student-spark-top">✦</span>
+            <div class="student-heading-row">
+              <svg class="student-botanical-sprig" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 42 C16 32 23 20 34 8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                <path d="M16 34 C11 33 8 28 10 24 C13 25 15 28 17 33 Z" fill="currentColor"/>
+                <path d="M21 27 C26 27 29 23 28 19 C25 20 23 23 21 26 Z" fill="currentColor"/>
+                <path d="M25 20 C20 18 18 13 20 9 C23 10 24 14 26 19 Z" fill="currentColor"/>
+                <path d="M30 13 C35 12 37 7 35 3 C32 5 31 9 29 13 Z" fill="currentColor"/>
+              </svg>
+              <h4 class="student-main-heading">Student Discount Available</h4>
+              <svg class="student-botanical-sprig right" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 42 C16 32 23 20 34 8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                <path d="M16 34 C11 33 8 28 10 24 C13 25 15 28 17 33 Z" fill="currentColor"/>
+                <path d="M21 27 C26 27 29 23 28 19 C25 20 23 23 21 26 Z" fill="currentColor"/>
+                <path d="M25 20 C20 18 18 13 20 9 C23 10 24 14 26 19 Z" fill="currentColor"/>
+                <path d="M30 13 C35 12 37 7 35 3 C32 5 31 9 29 13 Z" fill="currentColor"/>
+              </svg>
+            </div>
+            <p class="student-sub-notice">Student ID Required at Appointment</p>
           </div>
 
           <div class="student-cards-grid">
             <div class="student-item">
               <div class="student-item-main">
-                <h5 class="student-item-title">Student - Signature Brows</h5>
-                <span class="student-item-sub">Precision Brow Mapping, Tinting &amp; Waxing</span>
+                <h5 class="student-item-title">Student &mdash; Signature Brows</h5>
+                <span class="student-item-sub">Mapping, Shaping, Wax &amp; Tint</span>
                 <span class="student-item-meta">45 mins &bull; Deposit &pound;15</span>
               </div>
               <div class="student-item-action">
@@ -294,8 +520,8 @@
 
             <div class="student-item">
               <div class="student-item-main">
-                <h5 class="student-item-title">Student - Signature Brows &amp; Eyelash Tint</h5>
-                <span class="student-item-sub">Precision Brow Mapping, Tinting, Waxing &amp; Eyelash Tint</span>
+                <h5 class="student-item-title">Student &mdash; Signature Brows &amp; Lash Tint</h5>
+                <span class="student-item-sub">Signature Brow Mapping &amp; Waxing + Lash Tint</span>
                 <span class="student-item-meta">55 mins &bull; Deposit &pound;15</span>
               </div>
               <div class="student-item-action">
@@ -501,6 +727,6 @@
 
   </main>
 
-  <script src="assets/js/main.js?v=6"></script>
+  <script src="assets/js/main.js?v=7"></script>
 </body>
 </html>

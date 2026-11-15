@@ -401,6 +401,52 @@ body {
   margin-bottom: 3.5rem;
 }
 
+/* Category Dividers matching the Treatment Menu card */
+.menu-category-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 3.25rem 0 1.75rem 0;
+  text-align: center;
+}
+
+.menu-category-header:first-of-type {
+  margin-top: 1rem;
+}
+
+.category-rule {
+  flex: 1;
+  max-width: 150px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(45, 63, 51, 0.28));
+}
+
+.menu-category-header .category-rule.right {
+  background: linear-gradient(90deg, rgba(45, 63, 51, 0.28), transparent);
+}
+
+.category-title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--color-restoration);
+}
+
+/* Category Grid & Single Item Wrap */
+.category-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.35rem;
+}
+
+.single-card-wrap {
+  max-width: 440px;
+  margin: 0 auto;
+}
+
 .group-header {
   display: flex;
   align-items: center;
@@ -583,39 +629,61 @@ body {
   background: #FFFFFF;
   border: 1px solid rgba(193, 127, 68, 0.25);
   border-radius: 18px;
-  padding: 1.75rem;
+  padding: 2.25rem 1.75rem;
   box-shadow: var(--shadow-sm);
+  text-align: center;
 }
 
-.student-header {
+.student-notice-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.75rem;
+}
+
+.student-spark-top {
+  color: var(--color-radiance);
+  font-size: 0.85rem;
+  margin-bottom: 0.35rem;
+  display: inline-block;
+}
+
+.student-heading-row {
   display: flex;
   align-items: center;
-  gap: 0.8rem;
-  flex-wrap: wrap;
-  margin-bottom: 0.5rem;
+  justify-content: center;
+  gap: 1.1rem;
+  margin-bottom: 0.35rem;
 }
 
-.student-tag {
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--color-substrate);
-  background: var(--color-restoration);
-  padding: 0.28rem 0.75rem;
-  border-radius: 9999px;
+.student-botanical-sprig {
+  color: var(--color-restoration);
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  opacity: 0.85;
 }
 
-.student-id-notice {
-  font-size: 0.76rem;
-  color: var(--color-radiance-deep);
+.student-botanical-sprig.right {
+  transform: scaleX(-1);
+}
+
+.student-main-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.3rem, 2.8vw, 1.6rem);
   font-weight: 500;
+  color: var(--color-radiance-deep);
+  letter-spacing: 0.04em;
+  line-height: 1.2;
 }
 
-.student-desc {
-  font-size: 0.85rem;
+.student-sub-notice {
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   color: var(--color-restoration-muted);
-  margin-bottom: 1.35rem;
+  font-weight: 500;
 }
 
 .student-cards-grid {
