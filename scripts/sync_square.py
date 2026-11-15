@@ -98,6 +98,13 @@ METADATA_FALLBACKS = {
         "deposit": 15,
         "featured": True
     },
+    "Signature Brows & Eyelash Tint": {
+        "badge": "Popular Combo",
+        "detail": "Precision Brow Mapping, Tint & Wax + Eyelash Tint",
+        "summary": "The complete gaze transformation. Pairs our bespoke signature brow mapping, waxing, and tinting with a rich, glossy lash tint for luminous definition and depth.",
+        "deposit": 15,
+        "featured": True
+    },
     "Brow Lamination & Korean Lash Lift": {
         "badge": "Premier Duo",
         "detail": "Full Brow Lamination + Korean Keratin Lash Lift",
@@ -106,6 +113,41 @@ METADATA_FALLBACKS = {
         "featured": True
     }
 }
+
+ITEM_ORDER = {
+    "Eyebrow Wax": 1,
+    "Eyebrow Tint": 2,
+    "Signature Brows": 3,
+    "Brow Lamination": 4,
+    "Male Brows": 5,
+    "Eyelash Tint": 1,
+    "Lash Lift": 2,
+    "Korean Lash Lift": 3,
+    "Lip Waxing": 1,
+    "Signature Brows & Lash Tint": 1,
+    "Signature Brows & Eyelash Tint": 1,
+    "Signature Brows, Lash Lift & Tint": 2,
+    "Brow Lamination & Korean Lash Lift": 3
+}
+
+
+def classify_category(name: str, square_cat: str) -> str:
+    """Intelligently assigns items to Brows, Eyes, Lips, or Combos even if Square has no categories."""
+    norm_sq = (square_cat or "").strip()
+    if norm_sq in CATEGORY_ORDER:
+        return norm_sq
+
+    lower = name.lower()
+    if "&" in lower or "combo" in lower or ("brow" in lower and "lash" in lower) or ("lamination" in lower and "lift" in lower):
+        return "Combos"
+    elif "lip" in lower:
+        return "Lips"
+    elif "lash" in lower or ("eye" in lower and "brow" not in lower):
+        return "Eyes"
+    elif "brow" in lower:
+        return "Brows"
+    else:
+        return norm_sq if norm_sq else "Treatments"
 
 
 def sanitize_brand_text(text: str) -> str:
@@ -218,6 +260,7 @@ def get_mock_catalog():
 def parse_catalog(catalog_objects):
     categories = {}
     items_by_cat = {}
+    student_items = []
 
     for obj in catalog_objects:
         if obj.get("is_deleted"):
@@ -233,13 +276,15 @@ def parse_catalog(catalog_objects):
         if obj.get("type") == "ITEM":
             item_data = obj.get("item_data", {})
             cat_id = item_data.get("category_id")
-            cat_name = categories.get(cat_id, "Treatments")
+            square_cat = categories.get(cat_id, "")
             
             raw_name = item_data.get("name", "").strip()
             name = sanitize_brand_text(raw_name)
-            
-            if name.lower() == "signature brows & lash tint":
-                name = "Signature Brows & Lash Tint"
+            lower_name = name.lower()
+
+            # Skip patch test from main service grid (already in dedicated spotlight section)
+            if "patch test" in lower_name:
+                continue
 
             variations = item_data.get("variations", [])
             price = 0
@@ -252,14 +297,34 @@ def parse_catalog(catalog_objects):
                 duration_ms = var_data.get("service_duration") or 1800000
                 duration_mins = int(duration_ms // 60000)
 
+            # Route student concession items
+            if "student" in lower_name:
+                student_items.append({
+                    "name": name,
+                    "price": price,
+                    "duration": duration_mins
+                })
+                continue
+
+            target_cat = classify_category(name, square_cat)
             fallback = METADATA_FALLBACKS.get(name, {})
             sq_desc = sanitize_brand_text(item_data.get("description", "").strip())
-            
+
+            # Intelligent subtitle and description resolution:
+            # If Square has a short subtitle-like description (e.g. "Wax, Tint & Sculpt"), use as detail
+            if sq_desc and len(sq_desc) <= 65:
+                detail = sq_desc
+                summary = fallback.get("summary") or sq_desc
+            elif sq_desc:
+                summary = sq_desc
+                detail = fallback.get("detail", f"{duration_mins} mins tailored treatment")
+            else:
+                detail = fallback.get("detail", f"{duration_mins} mins tailored treatment")
+                summary = fallback.get("summary", "Bespoke beauty treatment tailored to your natural features.")
+
             badge = fallback.get("badge", "Essential")
-            detail = fallback.get("detail", f"{duration_mins} mins tailored treatment")
-            summary = sq_desc if sq_desc else fallback.get("summary", "Bespoke beauty treatment tailored to your natural features.")
             deposit = fallback.get("deposit", calculate_deposit(price))
-            featured = fallback.get("featured", ("Signature" in name or "Lamination" in name or cat_name == "Combos"))
+            featured = fallback.get("featured", ("Signature" in name or "Lamination" in name or target_cat == "Combos"))
 
             treatment = {
                 "name": name,
@@ -272,13 +337,22 @@ def parse_catalog(catalog_objects):
                 "featured": featured
             }
 
-            items_by_cat.setdefault(cat_name, []).append(treatment)
+            items_by_cat.setdefault(target_cat, []).append(treatment)
+
+    # Sort treatments within each category according to physical menu order
+    for cat in items_by_cat:
+        items_by_cat[cat].sort(key=lambda t: ITEM_ORDER.get(t["name"], 99))
 
     print(f"[INFO] Parsed {sum(len(v) for v in items_by_cat.values())} treatments across {len(items_by_cat)} categories:")
     for cat, items in items_by_cat.items():
         print(f"  [{cat}] ({len(items)} treatments)")
         for t in items:
             print(f"    • {t['name']} — £{t['price']} ({t['duration']} mins)")
+
+    if student_items:
+        print(f"[INFO] Found {len(student_items)} student concession items:")
+        for s in student_items:
+            print(f"    🎓 {s['name']} — £{s['price']} ({s['duration']} mins)")
 
     return items_by_cat
 
