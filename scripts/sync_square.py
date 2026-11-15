@@ -21,6 +21,7 @@ CATEGORY_ORDER = ["Brows", "Eyes", "Lips", "Combos"]
 # Curated metadata dictionary for brand badges, subtitles & descriptions
 # Used to enrich Square item data when Square only stores title & price
 METADATA_FALLBACKS = {
+    # Brows
     "Eyebrow Wax": {
         "badge": "Precision Wax",
         "detail": "Gentle Hot Wax Shaping & Tidy",
@@ -49,6 +50,13 @@ METADATA_FALLBACKS = {
         "deposit": 15,
         "featured": True
     },
+    "Hybrid Brows": {
+        "badge": "Precision Stain",
+        "detail": "Precision Wax, Hybrid Stain & Shape",
+        "summary": "Upgrades traditional tinting to a long-lasting hybrid stain for a richer, bolder, makeup-like finish combined with custom mapping and precision wax.",
+        "deposit": 15,
+        "featured": False
+    },
     "Male Brows": {
         "badge": "Men's Grooming",
         "detail": "Subtle Definition & Tidy",
@@ -56,6 +64,8 @@ METADATA_FALLBACKS = {
         "deposit": 5,
         "featured": False
     },
+
+    # Eyes
     "Eyelash Tint": {
         "badge": "Lash Enhancement",
         "detail": "Glossy Deep Pigment Tinting",
@@ -70,12 +80,35 @@ METADATA_FALLBACKS = {
         "deposit": 10,
         "featured": False
     },
+    "Lash Lift & Tint": {
+        "badge": "Root Lift",
+        "detail": "Semi-Permanent Lift & Glossy Tint",
+        "summary": "Lifts and curls natural lashes from the root while adding a glossy tint for an open, wide-awake gaze that lasts 6-8 weeks.",
+        "deposit": 15,
+        "featured": True
+    },
     "Korean Lash Lift": {
         "badge": "Keratin Infusion",
         "detail": "Gentle Keratin Conditioning & Lift",
         "summary": "An advanced nourishing lift utilizing deeply conditioning keratin solutions to strengthen natural lashes while delivering a soft, elegant curl.",
         "deposit": 15,
         "featured": True
+    },
+    "Korean Lash Lift & Tint": {
+        "badge": "Keratin Infusion",
+        "detail": "Nourishing Keratin Lift & Deep Tint",
+        "summary": "A modern, gentle keratin treatment that curls, lifts, and nourishes lashes without harsh perming chemicals, finished with deep pigment tinting.",
+        "deposit": 15,
+        "featured": True
+    },
+
+    # Lips & Face
+    "Lip Wax": {
+        "badge": "Delicate Wax",
+        "detail": "Gentle Upper Lip Hair Removal",
+        "summary": "Quick, delicate hair removal along the upper lip line for smooth, clear skin using soothing, sensitive hot wax.",
+        "deposit": 5,
+        "featured": False
     },
     "Lip Waxing": {
         "badge": "Delicate Wax",
@@ -84,9 +117,25 @@ METADATA_FALLBACKS = {
         "deposit": 5,
         "featured": False
     },
+    "Chin Wax": {
+        "badge": "Delicate Wax",
+        "detail": "Gentle Chin Hair Removal",
+        "summary": "Smooth, precise hair removal along the chin line using gentle, sensitive hot wax with botanical post-wax care.",
+        "deposit": 5,
+        "featured": False
+    },
+
+    # Combos
     "Signature Brows & Lash Tint": {
         "badge": "Popular Combo",
         "detail": "Signature Brows + Eyelash Tint",
+        "summary": "The complete gaze transformation. Pairs our bespoke signature brow mapping, waxing, and tinting with a rich, glossy lash tint for luminous definition and depth.",
+        "deposit": 15,
+        "featured": True
+    },
+    "Signature Brows & Eyelash Tint": {
+        "badge": "Popular Combo",
+        "detail": "Precision Brow Mapping, Tint & Wax + Eyelash Tint",
         "summary": "The complete gaze transformation. Pairs our bespoke signature brow mapping, waxing, and tinting with a rich, glossy lash tint for luminous definition and depth.",
         "deposit": 15,
         "featured": True
@@ -98,56 +147,91 @@ METADATA_FALLBACKS = {
         "deposit": 15,
         "featured": True
     },
-    "Signature Brows & Eyelash Tint": {
-        "badge": "Popular Combo",
-        "detail": "Precision Brow Mapping, Tint & Wax + Eyelash Tint",
-        "summary": "The complete gaze transformation. Pairs our bespoke signature brow mapping, waxing, and tinting with a rich, glossy lash tint for luminous definition and depth.",
-        "deposit": 15,
-        "featured": True
-    },
     "Brow Lamination & Korean Lash Lift": {
         "badge": "Premier Duo",
         "detail": "Full Brow Lamination + Korean Keratin Lash Lift",
         "summary": "The pinnacle of brow and lash luxury. Combines full brow lamination, waxing, and sculpting with the gentle, deeply nourishing Korean keratin lash lift for maximum fullness and curl.",
         "deposit": 20,
         "featured": True
+    },
+    "Brow Lamination & Korean Lash Lift & Tint": {
+        "badge": "Premier Duo",
+        "detail": "Full Brow Lamination + Korean Keratin Lash Lift & Tint",
+        "summary": "The pinnacle of brow and lash luxury. Combines full brow lamination, waxing, and sculpting with the gentle, deeply nourishing Korean keratin lash lift and gloss tint.",
+        "deposit": 20,
+        "featured": True
+    },
+    "Hybrid Brows & Korean Lash Lift & Tint": {
+        "badge": "Ultimate Defined",
+        "detail": "Hybrid Stain Brows + Korean Keratin Lash Lift & Tint",
+        "summary": "Pairs high-definition hybrid stain brows with a restorative Korean keratin lash lift and deep tint for dramatic, long-lasting definition.",
+        "deposit": 20,
+        "featured": True
     }
 }
 
 ITEM_ORDER = {
+    # Brows
     "Eyebrow Wax": 1,
     "Eyebrow Tint": 2,
     "Signature Brows": 3,
     "Brow Lamination": 4,
-    "Male Brows": 5,
+    "Hybrid Brows": 5,
+    "Male Brows": 6,
+
+    # Eyes
     "Eyelash Tint": 1,
     "Lash Lift": 2,
+    "Lash Lift & Tint": 2,
     "Korean Lash Lift": 3,
+    "Korean Lash Lift & Tint": 3,
+
+    # Lips
+    "Lip Wax": 1,
     "Lip Waxing": 1,
+    "Chin Wax": 2,
+
+    # Combos
     "Signature Brows & Lash Tint": 1,
     "Signature Brows & Eyelash Tint": 1,
     "Signature Brows, Lash Lift & Tint": 2,
-    "Brow Lamination & Korean Lash Lift": 3
+    "Brow Lamination & Korean Lash Lift": 3,
+    "Brow Lamination & Korean Lash Lift & Tint": 3,
+    "Hybrid Brows & Korean Lash Lift & Tint": 4
 }
 
 
 def classify_category(name: str, square_cat: str) -> str:
-    """Intelligently assigns items to Brows, Eyes, Lips, or Combos even if Square has no categories."""
-    norm_sq = (square_cat or "").strip()
-    if norm_sq in CATEGORY_ORDER:
-        return norm_sq
+    """Intelligently assigns items to Brows, Eyes, Lips, or Combos."""
+    norm_sq = (square_cat or "").strip().lower()
 
-    lower = name.lower()
-    if "&" in lower or "combo" in lower or ("brow" in lower and "lash" in lower) or ("lamination" in lower and "lift" in lower):
-        return "Combos"
-    elif "lip" in lower:
-        return "Lips"
-    elif "lash" in lower or ("eye" in lower and "brow" not in lower):
+    # Direct mapping from Square categories (case-insensitive)
+    if norm_sq in ["brows", "brow"]:
+        return "Brows"
+    elif norm_sq in ["lashes", "lash", "eyes", "eye"]:
         return "Eyes"
+    elif norm_sq in ["lips", "lip"]:
+        return "Lips"
+    elif norm_sq in ["combos", "combo"]:
+        return "Combos"
+
+    # Intelligent name heuristics if category is unassigned or custom
+    lower = name.lower()
+
+    # True combos combine brow + lash/lift or have combo keyword
+    if ("brow" in lower and "lash" in lower) or ("lamination" in lower and "lift" in lower) or "combo" in lower:
+        return "Combos"
+    # Facial waxing goes to Lips
+    elif "lip" in lower or "chin" in lower:
+        return "Lips"
+    # Lash services go to Eyes
+    elif "lash" in lower or ("lift" in lower and "brow" not in lower) or ("eye" in lower and "brow" not in lower):
+        return "Eyes"
+    # Brow services go to Brows
     elif "brow" in lower:
         return "Brows"
     else:
-        return norm_sq if norm_sq else "Treatments"
+        return "Lips" if "wax" in lower else "Brows"
 
 
 def sanitize_brand_text(text: str) -> str:
@@ -202,10 +286,11 @@ def fetch_square_catalog(token: str):
 
 def get_mock_catalog():
     return [
-        {"type": "CATEGORY", "id": "cat_brows", "category_data": {"name": "Brows"}},
-        {"type": "CATEGORY", "id": "cat_eyes", "category_data": {"name": "Eyes"}},
-        {"type": "CATEGORY", "id": "cat_lips", "category_data": {"name": "Lips"}},
-        {"type": "CATEGORY", "id": "cat_combos", "category_data": {"name": "Combos"}},
+        {"type": "CATEGORY", "id": "cat_brows", "category_data": {"name": "BROWS"}},
+        {"type": "CATEGORY", "id": "cat_lashes", "category_data": {"name": "LASHES"}},
+        {"type": "CATEGORY", "id": "cat_lips", "category_data": {"name": "LIPS"}},
+        {"type": "CATEGORY", "id": "cat_combos", "category_data": {"name": "COMBOS"}},
+        # Brows
         {"type": "ITEM", "id": "item_1", "item_data": {
             "name": "Eyebrow Wax", "category_id": "cat_brows",
             "variations": [{"item_variation_data": {"price_money": {"amount": 1000}, "service_duration": 1800000}}]
@@ -216,43 +301,54 @@ def get_mock_catalog():
         }},
         {"type": "ITEM", "id": "item_3", "item_data": {
             "name": "Signature Brows", "category_id": "cat_brows",
+            "description": "Mapping, Shaping, Wax & Tint",
             "variations": [{"item_variation_data": {"price_money": {"amount": 2500}, "service_duration": 2700000}}]
         }},
         {"type": "ITEM", "id": "item_4", "item_data": {
             "name": "Brow Lamination", "category_id": "cat_brows",
-            "variations": [{"item_variation_data": {"price_money": {"amount": 3000}, "service_duration": 2700000}}]
+            "description": "Wax, Tint & Sculpt",
+            "variations": [{"item_variation_data": {"price_money": {"amount": 3500}, "service_duration": 3600000}}]
         }},
         {"type": "ITEM", "id": "item_5", "item_data": {
-            "name": "Male Brows", "category_id": "cat_brows",
-            "variations": [{"item_variation_data": {"price_money": {"amount": 1200}, "service_duration": 1800000}}]
+            "name": "Hybrid Brows", "category_id": "cat_brows",
+            "description": "Precision Wax, Tint & Shape",
+            "variations": [{"item_variation_data": {"price_money": {"amount": 2800}, "service_duration": 3600000}}]
         }},
+        # Lashes / Eyes
         {"type": "ITEM", "id": "item_6", "item_data": {
-            "name": "Eyelash Tint", "category_id": "cat_eyes",
-            "variations": [{"item_variation_data": {"price_money": {"amount": 1000}, "service_duration": 1800000}}]
+            "name": "Eyelash Tint", "category_id": "cat_lashes",
+            "variations": [{"item_variation_data": {"price_money": {"amount": 1500}, "service_duration": 1800000}}]
         }},
         {"type": "ITEM", "id": "item_7", "item_data": {
-            "name": "Lash Lift", "category_id": "cat_eyes",
-            "variations": [{"item_variation_data": {"price_money": {"amount": 2000}, "service_duration": 2700000}}]
+            "name": "Lash Lift & Tint", "category_id": "cat_lashes",
+            "variations": [{"item_variation_data": {"price_money": {"amount": 3000}, "service_duration": 2700000}}]
         }},
         {"type": "ITEM", "id": "item_8", "item_data": {
-            "name": "Korean Lash Lift", "category_id": "cat_eyes",
-            "variations": [{"item_variation_data": {"price_money": {"amount": 4000}, "service_duration": 3000000}}]
+            "name": "Korean Lash Lift & Tint", "category_id": "cat_lashes",
+            "variations": [{"item_variation_data": {"price_money": {"amount": 4500}, "service_duration": 5400000}}]
         }},
+        # Combos
         {"type": "ITEM", "id": "item_9", "item_data": {
-            "name": "Lip Waxing", "category_id": "cat_lips",
-            "variations": [{"item_variation_data": {"price_money": {"amount": 800}, "service_duration": 900000}}]
+            "name": "Signature Brows, Lash Lift & Tint", "category_id": "cat_combos",
+            "description": "Signature Brows + Lash Lift & Lash Tint",
+            "variations": [{"item_variation_data": {"price_money": {"amount": 5000}, "service_duration": 5400000}}]
         }},
         {"type": "ITEM", "id": "item_10", "item_data": {
-            "name": "Signature Brows & Lash Tint", "category_id": "cat_combos",
-            "variations": [{"item_variation_data": {"price_money": {"amount": 3000}, "service_duration": 3300000}}]
+            "name": "Brow Lamination & Korean Lash Lift & Tint", "category_id": "cat_combos",
+            "variations": [{"item_variation_data": {"price_money": {"amount": 7500}, "service_duration": 6300000}}]
         }},
         {"type": "ITEM", "id": "item_11", "item_data": {
-            "name": "Signature Brows, Lash Lift & Tint", "category_id": "cat_combos",
-            "variations": [{"item_variation_data": {"price_money": {"amount": 4500}, "service_duration": 3900000}}]
+            "name": "Hybrid Brows & Korean Lash Lift & Tint", "category_id": "cat_combos",
+            "variations": [{"item_variation_data": {"price_money": {"amount": 7000}, "service_duration": 6300000}}]
         }},
+        # Lips
         {"type": "ITEM", "id": "item_12", "item_data": {
-            "name": "Brow Lamination & Korean Lash Lift", "category_id": "cat_combos",
-            "variations": [{"item_variation_data": {"price_money": {"amount": 6500}, "service_duration": 4500000}}]
+            "name": "Lip Wax", "category_id": "cat_lips",
+            "variations": [{"item_variation_data": {"price_money": {"amount": 500}, "service_duration": 900000}}]
+        }},
+        {"type": "ITEM", "id": "item_13", "item_data": {
+            "name": "Chin Wax", "category_id": "cat_lips",
+            "variations": [{"item_variation_data": {"price_money": {"amount": 500}, "service_duration": 900000}}]
         }}
     ]
 
@@ -275,9 +371,29 @@ def parse_catalog(catalog_objects):
             continue
         if obj.get("type") == "ITEM":
             item_data = obj.get("item_data", {})
+
+            # Filter out archived items
+            if item_data.get("is_archived"):
+                continue
+
+            # Check variations: filter out deleted or unbookable variations
+            variations = item_data.get("variations", [])
+            active_vars = []
+            for v in variations:
+                if v.get("is_deleted"):
+                    continue
+                v_data = v.get("item_variation_data") or {}
+                if v_data.get("available_for_booking") is False:
+                    continue
+                active_vars.append(v)
+
+            # If item has variations but none are active for booking, skip item
+            if variations and not active_vars:
+                continue
+
             cat_id = item_data.get("category_id")
             square_cat = categories.get(cat_id, "")
-            
+
             raw_name = item_data.get("name", "").strip()
             name = sanitize_brand_text(raw_name)
             lower_name = name.lower()
@@ -286,16 +402,13 @@ def parse_catalog(catalog_objects):
             if "patch test" in lower_name:
                 continue
 
-            variations = item_data.get("variations", [])
-            price = 0
-            duration_mins = 30
-            if variations:
-                var_data = variations[0].get("item_variation_data") or {}
-                price_money = var_data.get("price_money") or {}
-                price_amount = price_money.get("amount", 0) or 0
-                price = int(price_amount // 100)
-                duration_ms = var_data.get("service_duration") or 1800000
-                duration_mins = int(duration_ms // 60000)
+            active_var = active_vars[0] if active_vars else (variations[0] if variations else {})
+            var_data = active_var.get("item_variation_data") or {}
+            price_money = var_data.get("price_money") or {}
+            price_amount = price_money.get("amount", 0) or 0
+            price = int(price_amount // 100)
+            duration_ms = var_data.get("service_duration") or 1800000
+            duration_mins = int(duration_ms // 60000)
 
             # Route student concession items
             if "student" in lower_name:
